@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Oal-uc-V8o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gestures-->
+        <scene sceneID="XhG-U7-rvE">
+            <objects>
+                <viewController id="P4Z-cc-qy5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1yO-X0-tsD"/>
+                        <viewControllerLayoutGuide type="bottom" id="96b-Bm-n37"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OJb-ME-Owd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="ebd-VN-eha"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sl9-KX-fV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="267"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PVv-xT-sfH">
+            <objects>
+                <tabBarController id="Oal-uc-V8o" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qR9-3E-Mc4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cdK-y1-yUz" kind="relationship" relationship="viewControllers" id="RTW-KI-Lk4"/>
+                        <segue destination="P4Z-cc-qy5" kind="relationship" relationship="viewControllers" id="4uW-d0-5Z3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBX-M6-tp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="-61"/>
+        </scene>
+        <!--Logging-->
+        <scene sceneID="6Xz-nI-ADI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Logging" id="cdK-y1-yUz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Uqj-Qn-stZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtU-Pu-Ss6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.8" y="-446.17691154422795"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gestures" width="30" height="30"/>
+    </resources>
+</document>
