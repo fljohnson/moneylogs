@@ -34,8 +34,11 @@ class ItemCell: UITableViewCell {
   
   // MARK: - IBOutlets
   //@IBOutlet weak var gameLabel: UILabel!
-  @IBOutlet weak var nameLabel: UILabel!
   //@IBOutlet weak var ratingImageView: UIImageView!
+  
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var qtyLabel: UILabel!
+  @IBOutlet weak var totlLabel: UILabel!
   
   // MARK: - Properties
   var item: Shopitem? {
