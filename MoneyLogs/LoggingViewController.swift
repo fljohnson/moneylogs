@@ -85,18 +85,18 @@ private func setupDataSource() {
         //let regionType = filterSegmentedControl.regionType
 		
         let request = Shoplist.fetchRequest()
-		var weher: String = "List B" 
-		var aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg)
-		
+		let weher: String = "List B" 
+		let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg)
+	/*	
         do {
-			request.predicate = aha
+			request.predicate = aha //allegedly, no error would be thrown here
 		}
 		catch {
 			SampleData.mensaje="Predicate failure: \(error)"
 			return
 		}
-
-		
+*/
+		request.predicate = aha
 
 		
 
@@ -111,7 +111,7 @@ private func setupDataSource() {
         do {
 			//try frc?.performFetch()
 			var fetchedlists: [Shoplist]? = nil
-			try fetchedlists = SampleData.persistentContainer.viewContext.fetch(request) as! [Shoplist]
+			try fetchedlists = SampleData.persistentContainer.viewContext.fetch(request) as? [Shoplist]
 			if(fetchedlists == nil)
 			{
 				SampleData.mensaje="fetched is nil"
