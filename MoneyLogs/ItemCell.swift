@@ -44,7 +44,7 @@ class ItemCell: UITableViewCell {
       
       qtyLabel.text = "\(item.qty)"
       nameLabel.text = item.itemname
-      totlLabel.text = "\$\(item.rowtotal)"
+      totlLabel.text = "\(item.rowtotal)"
       
     }
   }
