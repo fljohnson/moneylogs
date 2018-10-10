@@ -20,7 +20,7 @@
 		5FA077551EF5D592007DB7F9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077541EF5D592007DB7F9 /* SampleData.swift */; };
 		5FC722D51EF5DCCB00A15F98 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */; };
 		5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */; };
-		5FD2B2C21EF6C9BE00447AFB /* Items.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF6C9BE00447AFB /* Items.storyboard */; };
+		5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		5FA077541EF5D592007DB7F9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
-		5FD2B2C11EF6C9BE00447AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Items.storyboard; sourceTree = "<group>"; };
+		5FD2B2C11EF6C9BE00447AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Logging.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 				5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */,
 				5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */,
 				5FA077421EF5C12F007DB7F9 /* Main.storyboard */,
-				5FD2B2C01EF6C9BE00447AFB /* Items.storyboard */,
+				5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */,
 				5FA077451EF5C12F007DB7F9 /* Assets.xcassets */,
 				5FA077471EF5C12F007DB7F9 /* LaunchScreen.storyboard */,
 				5FA0774A1EF5C12F007DB7F9 /* Info.plist */,
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA077491EF5C12F007DB7F9 /* LaunchScreen.storyboard in Resources */,
-				5FD2B2C21EF6C9BE00447AFB /* Items.storyboard in Resources */,
+				5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */,
 				5FA077461EF5C12F007DB7F9 /* Assets.xcassets in Resources */,
 				5FA077441EF5C12F007DB7F9 /* Main.storyboard in Resources */,
 			);
@@ -192,12 +192,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		5FD2B2C01EF6C9BE00447AFB /* Items.storyboard */ = {
+		5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5FD2B2C11EF6C9BE00447AFB /* Base */,
 			);
-			name = Items.storyboard;
+			name = Logging.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
