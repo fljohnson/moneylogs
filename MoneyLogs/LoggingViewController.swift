@@ -88,8 +88,8 @@ private func setupDataSource() {
 		let weher: String = "List B" 
 		//nonlethal, but does not match what it should 
 		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
-		//sanity check with literal - failed!
-		//let aha: NSPredicate = NSPredicate(format:"listname == 'List B'") 
+		//sanity check with literal - this time with @NSManaged on attribute
+		let aha: NSPredicate = NSPredicate(format:"listname == 'List B'") 
 	/*	
         do {
 			request.predicate = aha //allegedly, no error would be thrown here
@@ -99,8 +99,8 @@ private func setupDataSource() {
 			return
 		}
 */
-		//request.predicate = aha
-		//trying NSPredicate with the literal "listname == 'List B'" failed
+		request.predicate = aha
+		
 		
 
 /*        
@@ -155,12 +155,12 @@ private func setupDataSource() {
 			}
 
 			var wasahit="NO"
-			/*
+			
 			if( aha.evaluate(with: thelist))
 			{
 				wasahit="YES"
 			}	
-			*/
+			
 			//let mess = self.frc?.fetchedObjects?[0].items
 			let mess = thelist?.items
 			if(mess == nil)
