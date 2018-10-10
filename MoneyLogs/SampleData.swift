@@ -50,8 +50,8 @@ static var mensaje: String = "Hello World"
             fatalError("Unresolved error \(error), \(error.userInfo)")
         })
         
-
-		if(container.viewContext == nil)
+		/*
+		if(container.viewContext == nil) //supposedly, container.viewContext is never nil
 		{
 			mensaje = "IMPLOSION 1"
 		}
@@ -59,6 +59,7 @@ static var mensaje: String = "Hello World"
 		{
 	        mensaje = "SUCCESS!"
 		}
+		*/
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.viewContext.undoManager = nil // We don't need undo so set it to nil.
         container.viewContext.shouldDeleteInaccessibleFaults = true
@@ -136,7 +137,7 @@ static var mensaje: String = "Hello World"
 
 		do{
 			var rv: Shoplist? = nil
-			try rv = NSEntityDescription.insertNewObject(forEntityName: "Shoplist", into: context) as? Shoplist
+			rv = NSEntityDescription.insertNewObject(forEntityName: "Shoplist", into: context) as? Shoplist
 			if(rv != nil)
 			{
 				rv?.update(name:name, id:id)   

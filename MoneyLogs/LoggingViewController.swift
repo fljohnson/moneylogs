@@ -84,12 +84,12 @@ private func setupTableView() {
 private func setupDataSource() {
         //let regionType = filterSegmentedControl.regionType
 		
-        let request = NSFetchRequest<Shoplist> = Shoplist.fetchRequest()
+        let request = Shoplist.fetchRequest()
 		var weher: String = "List B" 
-		var aha: NSPredicate = NSPredicate(format:"listname == %@",weher! as CVarArg)
+		var aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg)
 		
         do {
-			try request.predicate = aha
+			request.predicate = aha
 		}
 		catch {
 			SampleData.mensaje="Predicate failure: \(error)"
