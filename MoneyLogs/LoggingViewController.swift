@@ -86,7 +86,10 @@ private func setupDataSource() {
 		
         let request = Shoplist.fetchRequest()
 		let weher: String = "List B" 
-		let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg)
+		//nonlethal, but does not match what it should 
+		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
+		//sanity check with literal
+		let aha: NSPredicate = NSPredicate(format:"listname == 'List B'") 
 	/*	
         do {
 			request.predicate = aha //allegedly, no error would be thrown here
