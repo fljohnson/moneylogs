@@ -34,8 +34,8 @@ import CoreData
 class Shoplist:NSManagedObject {
   
   // MARK: - Properties
-  @NSManaged var listname: String = ""
- @NSManaged var lid:Int32 = -1
+  @NSManaged var listname: String //= ""
+ @NSManaged var lid:Int32 = //-1
  var items: Set<Shopitem> = []
 
 
