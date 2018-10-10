@@ -155,10 +155,12 @@ private func setupDataSource() {
 			}
 
 			var wasahit="NO"
+			/*
 			if( aha.evaluate(with: thelist))
 			{
 				wasahit="YES"
 			}	
+			*/
 			//let mess = self.frc?.fetchedObjects?[0].items
 			let mess = thelist?.items
 			if(mess == nil)
