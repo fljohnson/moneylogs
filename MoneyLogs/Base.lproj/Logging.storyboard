@@ -30,8 +30,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="asJ-Qv-gDz">
                                                     <rect key="frame" x="0.0" y="0.0" width="45" height="59.5"/>
                                                     <subviews>
+														<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-F8-Iha" userLabel="Qty">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="42.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-F8-Uha" userLabel="Name">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="42.5"/>
+                                                            <rect key="frame" x="25" y="0.0" width="45" height="42.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-F8-Rha" userLabel="Total">
+                                                            <rect key="frame" x="70" y="0.0" width="45" height="42.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -66,7 +78,10 @@
                                 </tableViewCellContentView>
                                 <connections>
                                   <!--  <outlet property="gameLabel" destination="cWc-Km-Wxy" id="1Tx-LD-Xek"/> -->
+                                    
+                                    <outlet property="qtyLabel" destination="wb5-F8-Iha" id="8in-N2-hfE"/>
                                     <outlet property="nameLabel" destination="wb5-F8-Uha" id="8in-N2-hfE"/>
+                                    <outlet property="totlLabel" destination="wb5-F8-Rha" id="8in-N2-hfE"/>
                             <!--        <outlet property="ratingImageView" destination="mhb-km-IDI" id="R5U-GF-8Cf"/> -->
 									<segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-biZ"/>
                                 </connections>

@@ -42,7 +42,9 @@ class ItemCell: UITableViewCell {
     didSet {
       guard let item = item else { return }
       
+      qtyLabel.text = "\(item.qty)"
       nameLabel.text = item.itemname
+      totlLabel.text = "\$\(item.rowtotal)"
       
     }
   }
