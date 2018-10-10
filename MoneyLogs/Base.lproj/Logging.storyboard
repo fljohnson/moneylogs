@@ -79,9 +79,9 @@
                                 <connections>
                                   <!--  <outlet property="gameLabel" destination="cWc-Km-Wxy" id="1Tx-LD-Xek"/> -->
                                     
-                                    <outlet property="qtyLabel" destination="wb5-F8-Iha" id="8in-N2-hfE"/>
+                                    <outlet property="qtyLabel" destination="wb5-F8-Iha" id="8in-N2-hdE"/>
                                     <outlet property="nameLabel" destination="wb5-F8-Uha" id="8in-N2-hfE"/>
-                                    <outlet property="totlLabel" destination="wb5-F8-Rha" id="8in-N2-hfE"/>
+                                    <outlet property="totlLabel" destination="wb5-F8-Rha" id="8in-N2-haE"/>
                             <!--        <outlet property="ratingImageView" destination="mhb-km-IDI" id="R5U-GF-8Cf"/> -->
 									<segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-biZ"/>
                                 </connections>
