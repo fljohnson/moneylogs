@@ -39,10 +39,10 @@ class LoggingViewController: UITableViewController {
 var itemlist:[Logitem] = []
 var fired:Bool = false
 
-
+/*
  @IBOutlet weak var fromDtBtn: UIButton!
  @IBOutlet weak var toDtBtn: UIButton!
- 
+ */
  
 }
 
