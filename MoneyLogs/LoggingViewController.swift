@@ -43,7 +43,13 @@ var fired:Bool = false
  @IBOutlet weak var fromDtBtn: UIButton!
  @IBOutlet weak var toDtBtn: UIButton!
  
- func pressed(sender: UIButton!) {
+ 
+}
+
+  
+// MARK: - IBActions
+extension LoggingViewController {
+  @IBAction func pressed(sender: UIButton!) {
             var alertView = UIAlertView()
             alertView.addButton(withTitle:"OK")
             alertView.title = "Button hit"
@@ -57,12 +63,7 @@ var fired:Bool = false
 			}
             alertView.show()
         }
-}
-
-  
-// MARK: - IBActions
-extension LoggingViewController {
-  
+        
   @IBAction func cancelToLoggingViewController(_ segue: UIStoryboardSegue) {
   }
   
