@@ -38,7 +38,7 @@ class Logitem:NSManagedObject {
   @NSManaged var title:String
   @NSManaged var amount:Float
  @NSManaged var category:String
- @NSManaged var details:String
+ @NSManaged var details:String?
  
  
 
