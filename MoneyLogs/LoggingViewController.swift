@@ -42,7 +42,16 @@ var fired:Bool = false
 
  @IBOutlet weak var fromDtBtn: UIButton!
 // @IBOutlet weak var toDtBtn: UIButton!
- 
+
+	 @IBAction func saveButtonTouchUpInside(_ sender: AnyObject) {
+
+			saveButton.isLoading = true
+			
+			// Delay execution of my block for 3 seconds.
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(UInt64(3) * NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
+				self.saveButton.isLoading = false
+			}
+	}
  
 }
 
