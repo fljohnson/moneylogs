@@ -42,6 +42,14 @@ var fired:Bool = false
 
  @IBOutlet weak var fromDtBtn: UIButton!
  @IBOutlet weak var toDtBtn: UIButton!
+ 
+ func pressed(sender: UIButton!) {
+            var alertView = UIAlertView()
+            alertView.addButton(withTitle:"OK")
+            alertView.title = "Button hit"
+            alertView.message = "It was \(sender.currentTitle)"
+            alertView.show()
+        }
 }
 
   
@@ -141,13 +149,7 @@ private func setupDataSource() {
 
 extension LoggingViewController {
 
-func pressed(sender: UIButton!) {
-            var alertView = UIAlertView();
-            alertView.addButton(withTitle:"OK");
-            alertView.title = "Button hit";
-            alertView.message = "It was \(sender.currentTitle)";
-            alertView.show();
-        }
+
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
