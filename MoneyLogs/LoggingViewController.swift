@@ -45,12 +45,19 @@ var fired:Bool = false
 
 	 @IBAction func saveButtonTouchUpInside(_ sender: AnyObject) {
 
-			saveButton.isLoading = true
 			
-			// Delay execution of my block for 3 seconds.
-			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(UInt64(3) * NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) {
-				self.saveButton.isLoading = false
+            var alertView = UIAlertView()
+            alertView.addButton(withTitle:"OK")
+            alertView.title = "Button hit"
+            if(sender.currentTitle != nil)
+            {
+				alertView.message = "It was \(sender.currentTitle)"
 			}
+			else
+			{
+				alertView.message = "Drew a blank"
+			}
+            alertView.show()
 	}
  
 }
