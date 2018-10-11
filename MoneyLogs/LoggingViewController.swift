@@ -38,10 +38,12 @@ class LoggingViewController: UITableViewController {
   
 var itemlist:[Logitem] = []
 var fired:Bool = false
-}
+
 
  @IBOutlet weak var fromDtBtn: UIButton!
  @IBOutlet weak var toDtBtn: UIButton!
+}
+
   
 // MARK: - IBActions
 extension LoggingViewController {
@@ -141,7 +143,7 @@ extension LoggingViewController {
 
 func pressed(sender: UIButton!) {
             var alertView = UIAlertView();
-            alertView.addButtonWithTitle("Ok");
+            alertView.addButton(withTitle:"OK");
             alertView.title = "Button hit";
             alertView.message = "It was \(sender.currentTitle)";
             alertView.show();
@@ -149,8 +151,8 @@ func pressed(sender: UIButton!) {
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
-		fromDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), forControlEvents: .TouchUpInside)
-		toDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), forControlEvents: .TouchUpInside)
+		fromDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), for: .TouchUpInside)
+		toDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), for: .TouchUpInside)
 	}
 	
 	func showMessage(msg:String)
