@@ -40,6 +40,9 @@ var itemlist:[Logitem] = []
 var fired:Bool = false
 }
 
+ @IBOutlet weak var fromDtBtn: UIButton!
+ @IBOutlet weak var toDtBtn: UIButton!
+  
 // MARK: - IBActions
 extension LoggingViewController {
   
@@ -135,6 +138,21 @@ private func setupDataSource() {
 }
 
 extension LoggingViewController {
+
+func pressed(sender: UIButton!) {
+            var alertView = UIAlertView();
+            alertView.addButtonWithTitle("Ok");
+            alertView.title = "Button hit";
+            alertView.message = "It was \(sender.currentTitle)";
+            alertView.show();
+        }
+
+	override func viewDidLoad() {
+		super.viewDidLoad();
+		fromDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), forControlEvents: .TouchUpInside)
+		toDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), forControlEvents: .TouchUpInside)
+	}
+	
 	func showMessage(msg:String)
 	{
 		let alertController = UIAlertController(title: "Heads up", message: msg, preferredStyle: UIAlertControllerStyle.alert)
