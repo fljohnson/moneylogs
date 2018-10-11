@@ -47,7 +47,14 @@ var fired:Bool = false
             var alertView = UIAlertView()
             alertView.addButton(withTitle:"OK")
             alertView.title = "Button hit"
-            alertView.message = "It was \(sender.currentTitle)"
+            if(sender.currentTitle != nil)
+            {
+				alertView.message = "It was \(sender.currentTitle)"
+			}
+			else
+			{
+				alertView.message = "Drew a blank"
+			}
             alertView.show()
         }
 }
@@ -153,8 +160,8 @@ extension LoggingViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
-		fromDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), for: .TouchUpInside)
-		toDtBtn.addTarget(self, action: #selector(LoggingViewController.pressed(_:)), for: .TouchUpInside)
+		fromDtBtn.addTarget(self, action: #selector(pressed(_:)), for: .TouchUpInside)
+		toDtBtn.addTarget(self, action: #selector(pressed(_:)), for: .TouchUpInside)
 	}
 	
 	func showMessage(msg:String)
