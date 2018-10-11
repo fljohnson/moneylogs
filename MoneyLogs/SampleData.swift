@@ -155,7 +155,7 @@ static var mensaje: String = "Hello World"
 			rv = NSEntityDescription.insertNewObject(forEntityName: "Logitem", into: context) as? Logitem
 			if(rv != nil)
 			{
-				rv?.update(name:name,amt:amount,date:date, cat:category,details:"AHERG")   
+				rv?.update(name:name,amt:amount,date:date, cat:category,details:details)   
 			}
 			else
 			{
