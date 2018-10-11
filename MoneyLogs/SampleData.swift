@@ -147,7 +147,7 @@ static var mensaje: String = "Hello World"
 	*/
 	
 	static func generatePrimaryEntity(context:NSManagedObjectContext,name:String,
-			category:String,amount:Float,date:String,details: String?
+			category:String,amount:Float,date:String,details: String? = nil
 			) -> Logitem? {
 
 		do{
@@ -155,7 +155,7 @@ static var mensaje: String = "Hello World"
 			rv = NSEntityDescription.insertNewObject(forEntityName: "Logitem", into: context) as? Logitem
 			if(rv != nil)
 			{
-				rv?.update(name:name, cat:category,amt:amount,date:date,details:details)   
+				rv?.update(name:name,amt:amount,date:date, cat:category,details:details)   
 			}
 			else
 			{

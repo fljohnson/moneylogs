@@ -119,7 +119,7 @@ private func setupDataSource() {
 				return
 			}
 			itemlist = fetched!.sorted {
-				return ($0.thedate.timeIntervalSince1970 > $1.thedate.timeIntervalSince1970)
+				return ($0.thedate > $1.thedate)
 			}
 			
 		}

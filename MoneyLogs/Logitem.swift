@@ -43,7 +43,7 @@ class Logitem:NSManagedObject {
  
 
 
-	func update(name:String, amt:Float,date:String,cat:String,details:String? )
+	func update(name:String, amt:Float,date:String,cat:String,details:String? = nil)
 	{
 		self.thedate = date
 		self.title = name	
