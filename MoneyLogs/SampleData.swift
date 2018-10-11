@@ -99,7 +99,7 @@ static var mensaje: String = "Hello World"
 						category:"Transportation",
 						amount:10.00,
 						date:"2018-09-03",
-						details:"Travel to\/from jury duty"),		
+						details:"Travel to\\/from jury duty"),		
 				generatePrimaryEntity(context:taskContext, name:"Comcast",
 						category:"Living Expenses",
 						amount:86.83,
