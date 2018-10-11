@@ -15,8 +15,8 @@
 
 		40A86AFA201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld */; };
 		5FA077511EF5D484007DB7F9 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */; };
-		5FA077531EF5D565007DB7F9 /* Shoplist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077521EF5D565007DB7F9 /* Shoplist.swift */; };
-		5FA077531EF5D566007DB7F9 /* Shopitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077521EF5D566007DB7F9 /* Shopitem.swift */; };
+		5FA077531EF5D565007DB7F9 /* Logitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077521EF5D565007DB7F9 /* Logitem.swift */; };
+		
 		5FA077551EF5D592007DB7F9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077541EF5D592007DB7F9 /* SampleData.swift */; };
 		5FC722D51EF5DCCB00A15F98 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */; };
 		5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */; };
@@ -33,8 +33,8 @@
 		5FA0774A1EF5C12F007DB7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyLogs.xcdatamodel; sourceTree = "<group>"; };
 		5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
-		5FA077521EF5D565007DB7F9 /* Shoplist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoplist.swift; sourceTree = "<group>"; };
-		5FA077521EF5D566007DB7F9 /* Shopitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopitem.swift; sourceTree = "<group>"; };
+		5FA077521EF5D565007DB7F9 /* Logitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logitem.swift; sourceTree = "<group>"; };
+		
 		5FA077541EF5D592007DB7F9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 			children = (
 				40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld */,
 				5FA0773E1EF5C12F007DB7F9 /* AppDelegate.swift */,
-				5FA077521EF5D565007DB7F9 /* Shoplist.swift */,
-				5FA077521EF5D566007DB7F9 /* Shopitem.swift */,
+				5FA077521EF5D565007DB7F9 /* Logitem.swift */,
+				
 				5FA077541EF5D592007DB7F9 /* SampleData.swift */,
 				5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */,
 				5F59EF431EF6B1FC0070C88E /* ItemDetailsViewController.swift */,
@@ -163,8 +163,8 @@
 			files = (
 				40A86AFA201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld in Sources */,
 				5FA0773F1EF5C12F007DB7F9 /* AppDelegate.swift in Sources */,
-				5FA077531EF5D565007DB7F9 /* Shoplist.swift in Sources */,
-				5FA077531EF5D566007DB7F9 /* Shopitem.swift in Sources */,
+				5FA077531EF5D565007DB7F9 /* Logitem.swift in Sources */,
+				
 				5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */,
 				5F59EF441EF6B1FC0070C88E /* ItemDetailsViewController.swift in Sources */,
 				5FA077511EF5D484007DB7F9 /* LoggingViewController.swift in Sources */,

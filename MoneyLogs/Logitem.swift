@@ -31,24 +31,28 @@
 import CoreData
 
 
-class Shopitem:NSManagedObject {
+class Logitem:NSManagedObject {
   
   // MARK: - Properties
-  var itemname: String = ""
-  var qty:Float = 0.0
-  var detail: String = ""
-  var rowtotal:Float = 0.0
-//var added:Double = Date().timeIntervalSince1970
-  
-  
+  @NSManaged var thedate:String
+  @NSManaged var title:String
+  @NSManaged var amount:Float
+ @NSManaged var category:String
+ @NSManaged var details:String
+ 
+ 
 
 
-	func update(name:String,qty:Float, detail:String = "",rowtotal:Float)
+	func update(name:String, amt:Float,date:String,cat:String,details:String? )
 	{
-		self.itemname = name
-		self.qty = qty
-		self.rowtotal = rowtotal
-		self.detail = detail
+		self.thedate = date
+		self.title = name	
+		self.amount = amt
+		self.category = cat
+		self.details = details
+		
+		
+		
 	}
 	
 }

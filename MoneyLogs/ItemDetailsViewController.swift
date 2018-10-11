@@ -33,7 +33,7 @@ import UIKit
 class ItemDetailsViewController: UITableViewController {
   
   // MARK: - Properties
-  var item: Shopitem?
+  var item: Logitem?
   var goods: String?
   
   var game: String = "Chess" {
@@ -81,7 +81,7 @@ class ItemDetailsViewController: UITableViewController {
         // Used the text from the First View Controller to set the label
 		if(item != nil)
 		{
-			nameTextField.text = item?.itemname
+			nameTextField.text = item?.title
 		}
 		else
 		{

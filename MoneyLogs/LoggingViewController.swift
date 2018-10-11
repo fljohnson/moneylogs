@@ -36,8 +36,7 @@ class LoggingViewController: UITableViewController {
   // MARK: - Properties
 
   
-var frc: NSFetchedResultsController<Shoplist>? = nil
-var itemlist:[Shopitem] = []
+var itemlist:[Logitem] = []
 var fired:Bool = false
 }
 
@@ -84,7 +83,7 @@ private func setupTableView() {
 private func setupDataSource() {
         //let regionType = filterSegmentedControl.regionType
 		
-        let request = Shoplist.fetchRequest()
+        let request = Logitem.fetchRequest()
 		let weher: String = "List B" 
 		//nonlethal, but does not match what it should 
 		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
@@ -103,89 +102,26 @@ private func setupDataSource() {
 		
 		
 
-/*        
-        frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: SampleData.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-		if(frc == nil)
-		{
-			showMessage(msg:"frc is nil")
-			return
-		}
-*/
+
         do {
-			//try frc?.performFetch()
-			var fetchedlists: [Shoplist]? = nil
-			try fetchedlists = SampleData.persistentContainer.viewContext.fetch(request) as? [Shoplist]
-			if(fetchedlists == nil)
+			var fetched: [Logitem]? = nil
+			try fetched = SampleData.persistentContainer.viewContext.fetch(request) as? [Logitem]
+			if(fetched == nil)
 			{
 				SampleData.mensaje="fetched is nil"
 				return
 
 			}
 			
-			if(fetchedlists!.count == 0)
+			if(fetched!.count == 0)
 			{
 				SampleData.mensaje="fetched has no records"
 				return
 			}
-/*
-			else
-			{
-				SampleData.mensaje="fetched has \(fetchedlists![0].listname)"
-				return
-			}*/
-
-
-			var thelist:Shoplist? = nil
-
-			var feedback:String = ""
-
-			for suspect in fetchedlists!
-			{
-				feedback += "|" + suspect.listname 
-				if(suspect.listname == "List B")
-				{
-					thelist = suspect
-				}
+			itemlist = fetched!.sorted {
+				return ($0.thedate.timeIntervalSince1970 > $1.thedate.timeIntervalSince1970)
 			}
-
-			if(thelist == nil)
-			{
-				SampleData.mensaje="Missed with \(feedback)"
-				return
-			}
-
-			var wasahit="NO"
 			
-			if( aha.evaluate(with: thelist))
-			{
-				wasahit="YES"
-			}	
-			
-			//let mess = self.frc?.fetchedObjects?[0].items
-			let mess = thelist?.items
-			if(mess == nil)
-			{
-				SampleData.mensaje="items relationship is nil"
-				return
-			}
-			else
-			{
-				SampleData.mensaje="items relationship has \(mess!.count) members \(wasahit)"
-			}
-			let mess2 = mess?.sorted {
-				return ($0.qty < $1.qty)
-			}
-			if(mess2 != nil)
-			{
-				itemlist = mess2!
-				SampleData.mensaje="List \(weher) \(wasahit) has \(itemlist.count) sorted items"
-			}
-			else
-			{
-				SampleData.mensaje="Goofed sorting items"
-			}
-
-
 		}
 		catch {
 			SampleData.mensaje="Failed to fetch entities: \(error)"
@@ -222,9 +158,6 @@ override func viewWillAppear(_ animated: Bool)
 
 override func numberOfSections(in tableView: UITableView) -> Int {
 	
-    if frc != nil {
-		return 1
-    }
     return 1
 }
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -85,19 +85,32 @@ static var mensaje: String = "Hello World"
   
   static func generateSampleData()  {
 	let taskContext = persistentContainer.viewContext
-	var rv: [Shoplist?] = []
+	var rv: [Logitem?] = []
 
 	if(taskContext != nil)
 {
 
 		rv=[ 
-				generateList(context:taskContext, name:"List A",id:1),
-				generateList(context:taskContext, name:"List B",id:2),
-				generateList(context:taskContext, name:"List C",id:3)
+				generatePrimaryEntity(context:taskContext, name:"Rent",
+						category:"Living Expenses",
+						amount:826.85,
+						date:"2018-08-31"),
+				generatePrimaryEntity(context:taskContext, name:"Transit card",
+						category:"Transportation",
+						amount:10.00,
+						date:"2018-09-03",
+						details:"Travel to/from jury duty),		
+				generatePrimaryEntity(context:taskContext, name:"Comcast",
+						category:"Living Expenses",
+						amount:86.83,
+						date:"2018-09-04",
+						details:"Home internet")		
 			]
+			/*
 //add item(s) to "List B"
 		addToList(context:taskContext,list:rv[1]!,name:"Gala apples",qty:3,rowtotal:1.89)
 		addToList(context:taskContext,list:rv[1]!,name:"Orange juice",qty:1,rowtotal:2.25)
+		*/
 		do {
 		    try taskContext.save() //that's counterintuitive
 		} catch {
@@ -133,28 +146,31 @@ static var mensaje: String = "Hello World"
 	}
 	*/
 	
-	static func generateList(context:NSManagedObjectContext,name:String, id:Int32) -> Shoplist? {
+	static func generatePrimaryEntity(context:NSManagedObjectContext,name:String,
+			category:String,amount:Float,date:String,details: String?
+			) -> Logitem? {
 
 		do{
-			var rv: Shoplist? = nil
-			rv = NSEntityDescription.insertNewObject(forEntityName: "Shoplist", into: context) as? Shoplist
+			var rv: Logitem? = nil
+			rv = NSEntityDescription.insertNewObject(forEntityName: "Logitem", into: context) as? Logitem
 			if(rv != nil)
 			{
-				rv?.update(name:name, id:id)   
+				rv?.update(name:name, cat:category,amt:amount,date:date,details:details)   
 			}
 			else
 			{
-				mensaje = ("Error: Failed to create a new Shopping List object for other reasons")
+				mensaje = ("Error: Failed to create a new Logitem object for other reasons")
 			}
 			return rv			         
 		}
 		catch {
-		                mensaje = ("Error: Failed to create a new Shopping List object: \(error)")
+		        mensaje = ("Error: Failed to create a new Logitem object: \(error)")
 		         
 		}
 		return nil	
 	}
 	
+	/* deactivated for new model
 	static func addToList(context:NSManagedObjectContext,
 				list:Shoplist,
 				name:String,
@@ -169,5 +185,6 @@ static var mensaje: String = "Hello World"
 		list.items.insert(rv)	
 				
     }
+    */
 
 }

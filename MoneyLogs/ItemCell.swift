@@ -41,13 +41,13 @@ class ItemCell: UITableViewCell {
   @IBOutlet weak var totlLabel: UILabel!
   
   // MARK: - Properties
-  var item: Shopitem? {
+  var item: Logitem? {
     didSet {
       guard let item = item else { return }
       
-      qtyLabel.text = "\(item.qty)"
-      nameLabel.text = item.itemname
-      totlLabel.text = "\(item.rowtotal)"
+      catLabel.text = item.category
+      nameLabel.text = item.title
+      amtLabel.text = "\(item.amount)"
       
     }
   }
