@@ -37,8 +37,8 @@ class ItemCell: UITableViewCell {
   //@IBOutlet weak var ratingImageView: UIImageView!
   
   @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var qtyLabel: UILabel!
-  @IBOutlet weak var totlLabel: UILabel!
+  @IBOutlet weak var catLabel: UILabel!
+  @IBOutlet weak var amtLabel: UILabel!
   
   // MARK: - Properties
   var item: Logitem? {
