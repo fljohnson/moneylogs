@@ -5,7 +5,7 @@
         <attribute name="title" optional="NO" attributeType="String" syncable="YES"/>
 		<attribute name="amount" optional="NO" attributeType="Float" defaultValueString="1.00"  syncable="YES"/>
 		<attribute name="category" optional="NO" attributeType="String" syncable="YES"/>
-		<attribute name="details" optional="YES" attributeType="String" syncable="YES"/>		
+		<attribute name="details" optional="NO" attributeType="String" syncable="YES"/>		
         <compoundIndexes>
             <compoundIndex>
                 <index value="category"/>

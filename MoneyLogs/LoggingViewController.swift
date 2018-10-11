@@ -98,7 +98,7 @@ private func setupDataSource() {
 			return
 		}
 */
-		request.predicate = aha
+		//request.predicate = aha
 		
 		
 
