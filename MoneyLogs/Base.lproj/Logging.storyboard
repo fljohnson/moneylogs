@@ -25,7 +25,7 @@
 									<constraints>
 										<constraint firstAttribute="height" constant="45" id="M7r-qC-Sy2"/>
 									</constraints>
-									<state key="normal" title="From: 08/20/2018">
+									<state key="normal" title="From: 08 20 2018">
 										<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
 									</state>
 								</button>
@@ -34,10 +34,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="h7r-bn-ygn"/>
                                 </constraints>
-                                <state key="normal" title="To: 09/01/2018">
+                                <state key="normal" title="To: 09 01 2018">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
 </button>								
+<!--
                                 <stackView opaque="NO" axis="horizontal" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeP-pk-duk" userLabel="TemporaryView">
                                     <rect key="frame" x="8" y="55" width="584" height="37"/>
                                     <subviews>
@@ -51,6 +52,7 @@
                                     <color key="backgroundColor" red="0.72735822200775146" green="0.28733238577842712" blue="0.29370215535163879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     
                                 </stackView>
+                                -->
                             </subviews>
 						</view>
                         <prototypes>
