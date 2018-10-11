@@ -30,13 +30,17 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeP-pk-duk" userLabel="TemporaryView">
                                     <rect key="frame" x="8" y="55" width="584" height="37"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="infinite" text="The quick brown fox jumped over the lazy dog." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-Ys-TC2">
-                                            <rect key="frame" x="15" y="15" width="554" height="7"/>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-30Y" customClass="LoadingButton" customModule="MoneyLogs/vidwe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="396" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.88831676140000004" green="0.88831676140000004" blue="0.88831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CL9-qh-C0V"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
+                                </connections>
+</button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.72735822200775146" green="0.28733238577842712" blue="0.29370215535163879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -142,6 +146,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+						<!--
+                        <outlet property="disabledButton" destination="bXO-DR-JCt" id="aVW-LS-o0M"/>
+                        -->
+                        <outlet property="fromDtBtn" destination="8jA-3m-30Y" id="xrh-6x-eeo"/>
+</connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uea-u4-3Iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
