@@ -161,8 +161,8 @@ extension LoggingViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
-		fromDtBtn.addTarget(self, action: #selector(pressed(_:)), for: .TouchUpInside)
-		toDtBtn.addTarget(self, action: #selector(pressed(_:)), for: .TouchUpInside)
+		fromDtBtn.addTarget(self, action: #selector(pressed), for: .TouchUpInside)
+		toDtBtn.addTarget(self, action: #selector(pressed), for: .TouchUpInside)
 	}
 	
 	func showMessage(msg:String)
