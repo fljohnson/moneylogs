@@ -71,7 +71,7 @@ extension LoggingViewController {
             alertView.title = "Button hit"
             if(sender.currentTitle != nil)
             {
-				alertView.message = "It was "+ (sender.currentTitle)
+				alertView.message = "It was \(sender.currentTitle!)"
 			}
 			else
 			{
