@@ -20,6 +20,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-30Y" customClass="LoadingButton" customModule="MoneyLogs/vidwe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="396" width="374" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
+                                </connections>
+</button>
+								
+								<!--
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYA-nI-Wxv" userLabel="PermanentView">
                                     <rect key="frame" x="5" y="5" width="590" height="50"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,29 +40,13 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeP-pk-duk" userLabel="TemporaryView">
                                     <rect key="frame" x="8" y="55" width="584" height="137"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-30Y" customClass="LoadingButton" customModule="MoneyLogs/vidwe" customModuleProvider="target">
-                                <rect key="frame" x="20" y="396" width="374" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="CL9-qh-C0V"/>
-                                </constraints>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
-                                </connections>
-</button>
+
                                     </subviews>
-                                    <!--
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="wV2-Ys-TC2" secondAttribute="trailing" constant="15" id="ZqR-hu-0xp"/>
-                                        <constraint firstAttribute="bottom" secondItem="wV2-Ys-TC2" secondAttribute="bottom" constant="15" id="nmg-Pb-fww"/>
-                                        <constraint firstItem="wV2-Ys-TC2" firstAttribute="top" secondItem="zeP-pk-duk" secondAttribute="top" constant="15" id="qNI-hl-PVa"/>
-                                        <constraint firstItem="wV2-Ys-TC2" firstAttribute="leading" secondItem="zeP-pk-duk" secondAttribute="leading" constant="15" id="tX0-Oj-uN2"/>
-                                    </constraints>
-                                    -->
+                                    
                                 </view>
+                                -->
                             </subviews>
+                            <!--
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="zeP-pk-duk" secondAttribute="bottom" constant="8" id="9gX-tG-prd"/>
@@ -63,6 +57,7 @@
                                 <constraint firstItem="zeP-pk-duk" firstAttribute="leading" secondItem="AfV-vS-VpN" secondAttribute="leading" constant="8" id="piV-cb-NFB"/>
                                 <constraint firstItem="JYA-nI-Wxv" firstAttribute="leading" secondItem="AfV-vS-VpN" secondAttribute="leading" constant="5" id="wij-J8-9fS"/>
                             </constraints>
+                            -->
 						</view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="60" id="Wlg-vU-ttm" customClass="ItemCell" customModule="MoneyLogs" customModuleProvider="target">
