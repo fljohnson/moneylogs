@@ -51,7 +51,7 @@ var fired:Bool = false
             alertView.title = "Button hit"
             if(sender.currentTitle != nil)
             {
-				alertView.message = "It was \(sender.currentTitle)"
+				alertView.message = "It was the save key"
 			}
 			else
 			{
@@ -71,7 +71,7 @@ extension LoggingViewController {
             alertView.title = "Button hit"
             if(sender.currentTitle != nil)
             {
-				alertView.message = "It was \(sender.currentTitle)"
+				alertView.message = "It was "+ (sender.currentTitle)
 			}
 			else
 			{
@@ -177,7 +177,7 @@ extension LoggingViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
-		fromDtBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+//		fromDtBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
 //		toDtBtn.addTarget(self, action: #selector(pressed), for: .touchUpInside)
 	}
 	

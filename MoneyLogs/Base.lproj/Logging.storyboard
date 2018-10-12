@@ -22,10 +22,14 @@
                             <subviews>
 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-30Y" customClass="LoadingButton" customModule="MoneyLogs/vidwe" customModuleProvider="target">
                                 <rect key="frame" x="0" y="80" width="374" height="40"/>
+                               <!--
                                <color key="backgroundColor" red="0.88831676140000004" green="0.88831676140000004" blue="0.88831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+                               -->
 
                                 <state key="normal" title="Save">
+									<!--
 									<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+									-->
 								</state>
                                 <connections>
                                     <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
