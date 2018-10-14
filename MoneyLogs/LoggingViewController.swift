@@ -236,7 +236,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
       sender: Any?)
 	{
 		let controller = segue.destination as? ItemDetailsViewController
-		if(sender == fromDtBtn)
+		if((sender as? UIButton)?.currentTitle == fromDtButton.currentTitle)
 		{
 			controller?.goods = fromDtBtn.currentTitle;
 		}
@@ -245,7 +245,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 			let thePath = tableView.indexPathForSelectedRow
 			if(thePath != nil && controller != nil)
 			{
-				controller?.player = players[thePath!.row]
+		//		controller?.player = players[thePath!.row] //there is nothing there
 			}
 			controller?.goods = "HIT!";
 		}
