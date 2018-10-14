@@ -33,7 +33,10 @@
 									<color key="titleShadowColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.38831676140000004" alpha="1" colorSpace="calibratedRGB"/>
 								</state>
                                 <connections>
+									<!--
                                     <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
+                                    -->
+                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buZ"/>
                                 </connections>
 </button>
 								
@@ -329,6 +332,10 @@
             </objects>
             <point key="canvasLocation" x="3058" y="-448"/>
         </scene>
+		<!--TODO: create a Scene as described in the GitHub project mentioned on https://stackoverflow.com/questions/40484182/ios-swift-3-uidatepicker.
+		This is to put up a page for date editing. 
+		I think that the button I defined needs its connection set to a segue per line 221 of this file
+		-->
     </scenes>
     <resources>
         <image name="Players" width="30" height="30"/>

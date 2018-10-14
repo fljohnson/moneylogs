@@ -231,18 +231,25 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 */
 // "?." is for optional chaining, and fails gracefully on nil dereference; "!." is for forced unwrapping, and would cause a crash on nil dereference
 
-/* TODO: figure out the detail part this will take us to
+/* TODO: figure out the detail part this will take us to */
 	override func prepare(for segue: UIStoryboardSegue, 
       sender: Any?)
 	{
 		let controller = segue.destination as? ItemsDetailsViewController
-		let thePath = tableView.indexPathForSelectedRow
-		if(thePath != nil && controller != nil)
+		if(sender == fromDtBtn)
 		{
-			controller?.player = players[thePath!.row]
+			controller?.goods = fromDtBtn.currentTitle;
 		}
-		controller?.goods = "HIT!";
+		else
+		{
+			let thePath = tableView.indexPathForSelectedRow
+			if(thePath != nil && controller != nil)
+			{
+				controller?.player = players[thePath!.row]
+			}
+			controller?.goods = "HIT!";
+		}
 
 	}
-	*/
+	
 }
