@@ -236,7 +236,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
       sender: Any?)
 	{
 		let controller = segue.destination as? ItemDetailsViewController
-		if((sender as? UIButton)?.currentTitle == fromDtButton.currentTitle)
+		if((sender as? UIButton)?.currentTitle == fromDtBtn.currentTitle)
 		{
 			controller?.goods = fromDtBtn.currentTitle;
 		}
