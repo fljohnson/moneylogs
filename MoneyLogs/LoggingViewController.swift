@@ -156,10 +156,10 @@ extension LoggingViewController {
 private func setupTableView() {
 		if(!fired)
 		{
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 44
-        tableView.delegate = self
-        setupDataSource()
+			tableView.rowHeight = UITableViewAutomaticDimension
+			tableView.estimatedRowHeight = 44
+			tableView.delegate = self
+			setupDataSource()
 			fired = true
 		}
 }

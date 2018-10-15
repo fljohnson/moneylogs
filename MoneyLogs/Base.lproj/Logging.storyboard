@@ -37,7 +37,7 @@
 									<!--
                                     <action selector="saveButtonTouchUpInside:" destination="J5R-3h-RWC" eventType="touchUpInside" id="6P1-qD-U8E"/>
                                     -->
-                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Vri-F8-buZ"/>
                                 </connections>
 </button>
 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-31Y" customModule="MoneyLogs" customModuleProvider="target">
@@ -46,7 +46,7 @@
 									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
 								</state>
                                 <connections>
-                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buG"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Vri-F8-buG"/>
                                 </connections>
 </button>
 								<!--
