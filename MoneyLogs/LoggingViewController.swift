@@ -121,11 +121,11 @@ extension LoggingViewController {
     dates[dateIndex]=datestring
     if(dateIndex == 0)
     {
-		fromDtBtn.setTitle("From:" + datestring, for:UIControl.State.normal)
+		fromDtBtn.setTitle("From:" + datestring, for:.normal)
     }
     if(dateIndex == 1)
     {
-		toDtBtn.setTitle("To:" + datestring, for:UIControl.State.normal)
+		toDtBtn.setTitle("To:" + datestring, for:.normal)
     }
     
   }

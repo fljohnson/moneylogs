@@ -38,7 +38,7 @@ class DatePickingViewController: UIViewController {
             let possDate = dateFormatter.date(from: curdate)
             if(possDate != nil)
             {
-				datePicker.setDate(date:possDate, animated:false)
+				datePicker.setDate(possDate, animated:false)
             }
         }
 	}
