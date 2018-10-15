@@ -86,10 +86,12 @@ extension LoggingViewController {
   }
   
   @IBAction func saveChosenDate(_ segue: UIStoryboardSegue) {
-	guard let datePickerController = segue.source as? DatePickingViewController,
-      let datestring = datePickerController.curdate else {
+	guard let datePickerController = segue.source as? DatePickingViewController
+       else {
         return
     }
+    
+    let datestring = datePickerController.curdate
     
     //if we got here, we get to handle datestring
     //ditch the stupid stuff first

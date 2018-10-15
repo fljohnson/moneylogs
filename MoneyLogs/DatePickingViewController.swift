@@ -25,8 +25,23 @@ class DatePickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        if(curdate != nil && !curdate.isEmpty)
+        {
+			dateLabel.text = curdate
+			//set datePicker
+			
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateStyle = DateFormatter.Style.short
+            dateFormatter.timeStyle = DateFormatter.Style.none
+            
+            let possDate = dateFormatter.date(from: curdate)
+            if(possDate != nil)
+            {
+				datePicker.setDate(date:possDate, animated:false)
+            }
+        }
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,24 +70,6 @@ class DatePickingViewController: UIViewController {
     }*/
   }
   
-  override func viewDidLoad() {
-        super.viewDidLoad()
-        if(curdate != nil && !curdate.isEmpty)
-        {
-			dateLabel.text = curdate
-			//set datePicker
-			
-            let dateFormatter = DateFormatter()
-            
-            dateFormatter.dateStyle = DateFormatter.Style.short
-            dateFormatter.timeStyle = DateFormatter.Style.none
-            
-            let possDate = dateFormatter.date(from: curdate)
-            if(possDate != nil)
-            {
-				datePicker.setDate(date:possDate)
-            }
-        }
-	}
+  
 }
 
