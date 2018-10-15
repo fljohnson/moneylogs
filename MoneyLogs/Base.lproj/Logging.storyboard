@@ -21,16 +21,17 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-30Y" customModule="MoneyLogs" customModuleProvider="target">
-                                <rect key="frame" x="0" y="80" width="374" height="40"/>
-                               
+                                <rect key="frame" x="0" y="0" width="374" height="40"/>
+                               <!--
                                <color key="backgroundColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.38831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+                               -->
                                
 
-                                <state key="normal" title="Save">
+                                <state key="normal" title="From:">
+									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
 									<!--
-									<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-									-->
 									<color key="titleShadowColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.98831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+									-->
 								</state>
                                 <connections>
 									<!--
@@ -39,7 +40,15 @@
                                     <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buZ"/>
                                 </connections>
 </button>
-								
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jA-3m-31Y" customModule="MoneyLogs" customModuleProvider="target">
+                                <rect key="frame" x="0" y="80" width="374" height="40"/>
+                                <state key="normal" title="To:">
+									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
+								</state>
+                                <connections>
+                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buZ"/>
+                                </connections>
+</button>
 								<!--
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYA-nI-Wxv" userLabel="PermanentView">
                                     <rect key="frame" x="5" y="5" width="590" height="50"/>
@@ -159,6 +168,7 @@
                         <outlet property="disabledButton" destination="bXO-DR-JCt" id="aVW-LS-o0M"/>
                         -->
                         <outlet property="fromDtBtn" destination="8jA-3m-30Y" id="xrh-6x-eeo"/>
+                        <outlet property="toDtBtn" destination="8jA-3m-31Y" id="xrh-6x-exo"/>
 </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uea-u4-3Iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,7 +245,7 @@
                     <navigationItem key="navigationItem" title="Add Item" id="uNO-H9-yzf">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SMc-AG-vz0">
                             <connections>
-                                <segue destination="xUV-yw-MHb" kind="unwind" unwindAction="cancelToItemsViewController:" id="5JX-eY-zFb"/>
+                                <segue destination="xUV-yw-MHb" kind="unwind" unwindAction="cancelToLoggingViewController:" id="5JX-eY-zFb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Nx-qc-dze">
@@ -336,6 +346,61 @@
 		This is to put up a page for date editing. 
 		I think that the button I defined needs its connection set to a segue per line 221 of this file
 		-->
+		<!--DatePickingViewController-->
+		<scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DatePickingViewController" customModule="MoneyLogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/DD/YY HH:MM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-L9-lMj">
+                                <rect key="frame" x="114" y="50" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="48D-iZ-Uss">
+                                <rect key="frame" x="0.0" y="97" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506809720.61473799">
+                                    <!--2017-01-22 20:28:40 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6v7-Hc-rbv"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HCt-L9-lMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h2s-Fx-w17"/>
+                            <constraint firstItem="HCt-L9-lMj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="lHZ-EB-Vo6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="uNO-H9-Izf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SMc-AG-at0">
+                            <connections>
+                                <segue destination="xUV-yw-MHb" kind="unwind" unwindAction="cancelToLoggingViewController:" id="5JX-eY-zTa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Nx-qc-doe">
+                            <connections>
+                                <segue destination="xUV-yw-MHb" kind="unwind" identifier="SaveChosenDate" unwindAction="saveChosenDate:" id="YcX-aN-0Z1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="HCt-L9-lMj" id="fGv-9n-5wI"/>
+                        <outlet property="datePicker" destination="48D-iZ-Uss" id="zpC-iI-td7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Players" width="30" height="30"/>

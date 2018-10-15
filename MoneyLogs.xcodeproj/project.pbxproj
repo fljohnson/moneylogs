@@ -21,9 +21,11 @@
 		5FC722D51EF5DCCB00A15F98 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */; };
 		5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */; };
 		5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */; };
+		5FC0773F1EF5C12F007DB7F9 /* DatePickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickingViewController.swift; sourceTree = "<group>"; };
 		5F59EF431EF6B1FC0070C88E /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		5FA0773B1EF5C12F007DB7F9 /* MoneyLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA0773E1EF5C12F007DB7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 				40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld */,
 				5FA0773E1EF5C12F007DB7F9 /* AppDelegate.swift */,
 				5FA077521EF5D565007DB7F9 /* Logitem.swift */,
-				
+				5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */,
 				5FA077541EF5D592007DB7F9 /* SampleData.swift */,
 				5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */,
 				5F59EF431EF6B1FC0070C88E /* ItemDetailsViewController.swift */,
@@ -162,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40A86AFA201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld in Sources */,
+				5FC0773F1EF5C12F007DB7F9 /* DatePickingViewController.swift in Sources */,
 				5FA0773F1EF5C12F007DB7F9 /* AppDelegate.swift in Sources */,
 				5FA077531EF5D565007DB7F9 /* Logitem.swift in Sources */,
 				

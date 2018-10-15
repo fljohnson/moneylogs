@@ -38,10 +38,12 @@ class LoggingViewController: UITableViewController {
   
 var itemlist:[Logitem] = []
 var fired:Bool = false
+var dates:[String] = ["09/03/2018","09/30/2018"]
+var dateIndex:Int = 0
 
 
  @IBOutlet weak var fromDtBtn: UIButton!
-// @IBOutlet weak var toDtBtn: UIButton!
+ @IBOutlet weak var toDtBtn: UIButton!
 
 	 @IBAction func saveButtonTouchUpInside(_ sender: AnyObject) {
 
@@ -81,6 +83,49 @@ extension LoggingViewController {
         }
         
   @IBAction func cancelToLoggingViewController(_ segue: UIStoryboardSegue) {
+  }
+  
+  @IBAction func saveChosenDate(_ segue: UIStoryboardSegue) {
+	guard let datePickerController = segue.source as? DatePickingViewController,
+      let datestring = datePickerController.curdate else {
+        return
+    }
+    
+    //if we got here, we get to handle datestring
+    //ditch the stupid stuff first
+    if(datestring == nil || datestring.isEmpty)
+    {
+		//alert that we got a bad item from datePickerController
+		var alertView = UIAlertView()
+		alertView.addButton(withTitle:"OK")
+		alertView.title = "UHOH"
+		alertView.message = "datestring is not valid"
+		alertView.show()
+		return
+    }
+    if(dateIndex < 0)
+    {
+		//alert that dateIndex is out of bounds
+		
+		var alertView = UIAlertView()
+		alertView.addButton(withTitle:"OK")
+		alertView.title = "UHOH"
+		alertView.message = "dateIndex is \(dateIndex)"
+		alertView.show()
+            
+		return
+    }
+    
+    dates[dateIndex]=datestring
+    if(dateIndex == 0)
+    {
+		fromDtBtn.setTitle("From:" + datestring, for:UIControl.State.normal)
+    }
+    if(dateIndex == 1)
+    {
+		toDtBtn.setTitle("To:" + datestring, for:UIControl.State.normal)
+    }
+    
   }
   
   @IBAction func saveItemDetail(_ segue: UIStoryboardSegue) {
@@ -235,13 +280,32 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 	override func prepare(for segue: UIStoryboardSegue, 
       sender: Any?)
 	{
-		let controller = segue.destination as? ItemDetailsViewController
-		if((sender as? UIButton)?.currentTitle == fromDtBtn.currentTitle)
+		
+		let boton = (sender as? UIButton)
+		if(boton != nil)
 		{
-			controller?.goods = fromDtBtn.currentTitle;
+			dateIndex = -1
+			if(boton?.currentTitle == fromDtBtn.currentTitle)
+			{
+				dateIndex = 0
+			}
+			else
+			if(boton?.currentTitle == toDtBtn.currentTitle)
+			{
+				dateIndex = 1
+			}
+			if(dateIndex != -1)
+			{
+				let controller = segue.destination as? DatePickingViewController
+				if(controller != nil)
+				{
+					controller?.curdate=dates[dateIndex]
+				}
+			}
 		}
 		else
 		{
+			let controller = segue.destination as? ItemDetailsViewController
 			let thePath = tableView.indexPathForSelectedRow
 			if(thePath != nil && controller != nil)
 			{
