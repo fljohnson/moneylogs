@@ -25,7 +25,7 @@ class DatePickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(curdate != nil && !curdate.isEmpty)
+        if(!curdate.isEmpty)
         {
 			dateLabel.text = curdate
 			//set datePicker
@@ -38,7 +38,7 @@ class DatePickingViewController: UIViewController {
             let possDate = dateFormatter.date(from: curdate)
             if(possDate != nil)
             {
-				datePicker.setDate(possDate, animated:false)
+				datePicker.setDate(possDate!, animated:false)
             }
         }
 	}
