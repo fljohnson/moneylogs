@@ -46,7 +46,7 @@
 									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
 								</state>
                                 <connections>
-                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buZ"/>
+                                    <segue destination="gs1-dg-ImL" kind="show" id="Vri-F8-buG"/>
                                 </connections>
 </button>
 								<!--
