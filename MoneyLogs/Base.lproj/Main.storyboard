@@ -25,7 +25,7 @@
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="ebd-VN-eha"/>
                 </viewController>
                 -->
-                <viewControllerPlaceholder storyboardName="Stats" id="cdz-y1-yUK" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Stats" id="P4Z-cc-qy5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gestures"  id="ebd-VN-eha"/>
                 </viewControllerPlaceholder>
                 
