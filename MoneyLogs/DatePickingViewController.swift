@@ -31,7 +31,7 @@ class DatePickingViewController: UIViewController {
 			curISODate = isoFormatter.string(datePicker.date)
 			*/
 			
-			let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+			let options: ISO8601DateFormatter.Options = [withFullDate, withDashSeparatorInDate]
 			curISODate = ISO8601DateFormatter.string(from: datePicker.date, timeZone: TimeZone.current, formatOptions: options)
     }
 
@@ -82,7 +82,7 @@ class DatePickingViewController: UIViewController {
 		*/
 		
 		
-		let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+		let options: ISO8601DateFormatter.Options = [withFullDate, withDashSeparatorInDate]
 		curISODate = ISO8601DateFormatter.string(from: datePicker.date, timeZone: TimeZone.current, formatOptions: options)
 
 		
