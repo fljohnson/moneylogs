@@ -35,6 +35,27 @@ class DatePickingViewController: UIViewController {
 			curISODate = ISO8601DateFormatter.string(from: datePicker.date, timeZone: TimeZone.current, formatOptions: options)
     }
 
+	override func viewDidAppear(_ animated:Bool) {
+	
+		if(!curdate.isEmpty)
+        {
+			dateLabel.text = curdate
+			//set datePicker
+			
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateStyle = DateFormatter.Style.short
+            dateFormatter.timeStyle = DateFormatter.Style.none
+            
+            let possDate = dateFormatter.date(from: curdate)
+            if(possDate != nil)
+            {
+				datePicker.setDate(possDate!, animated:false)
+            }
+        }
+        super.viewDidAppear(animated)
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         if(!curdate.isEmpty)

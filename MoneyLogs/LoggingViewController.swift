@@ -331,7 +331,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				let controller = segue.destination as? DatePickingViewController
 				if(controller != nil)
 				{
-					controller!.curdate=dates[dateIndex]
+					controller?.curdate=dates[dateIndex]
 				}
 			}
 		}
@@ -343,7 +343,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 			{
 		//		controller?.player = players[thePath!.row] //there is nothing there
 			}
-			controller!.goods = "HIT!";
+			controller?.goods = "HIT!";
 		}
 
 	}
