@@ -188,7 +188,7 @@ private func setupDataSource() {
 		request.predicate = aha
 		
 		
-		SampleData.mensaje = ""
+		SampleData.mensaje = dbDates[1]
 
         do {
 			var fetched: [Logitem]? = nil
@@ -258,10 +258,11 @@ override func viewWillAppear(_ animated: Bool)
 	//mangle it
 	
 	//set up the date strings for querying - ISO8601 style
+	/*
 	let options: ISO8601DateFormatter.Options = [.withFullDate, .withDashSeparatorInDate]
 	dbDates[0] = ISO8601DateFormatter.string(from: monthstart, timeZone: TimeZone.current, formatOptions: options)
 	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
-	
+	*/
 	//now for the UI
 	
 	let dateFormatter = DateFormatter()	
