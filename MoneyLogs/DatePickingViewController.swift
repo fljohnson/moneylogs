@@ -58,7 +58,7 @@ class DatePickingViewController: UIViewController {
             
             let dateFormatter = ISO8601DateFormatter()
             let options: ISO8601DateFormatter.Options = [.withFullDate, .withDashSeparatorInDate]
-            ISO8601DateFormatter.formatOptions = options
+            dateFormatter.formatOptions = options
             
             let possDate = dateFormatter.date(from: curdate)
             
