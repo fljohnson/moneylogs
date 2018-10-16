@@ -92,7 +92,7 @@ extension LoggingViewController {
         return
     }
     
-    let datestring = datePickerController.curdate
+    let datestring = datePickerController.curdate!
     
     //if we got here, we get to handle datestring
     //ditch the stupid stuff first
