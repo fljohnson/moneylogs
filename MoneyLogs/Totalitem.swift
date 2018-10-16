@@ -17,7 +17,7 @@ static var categories: [String] = [
 	amount = 0.0
 	//now for the messy stuff: select all Logitems where category = categoryName
 	let request = Logitem.fetchRequest()
-	let predicate: NSPredicate = NSPredicate(format:"category == %@",catetgoryName)
+	let predicate: NSPredicate = NSPredicate(format:"category == %@",categoryName)
 	request.predicate = predicate
 	
 	do {
@@ -30,7 +30,7 @@ static var categories: [String] = [
 
 			}
 			
-			for subject in fetched
+			for subject in fetched!
 			{
 				amount += subject.amount
 			}
