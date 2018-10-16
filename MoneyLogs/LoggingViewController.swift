@@ -263,7 +263,7 @@ extension LoggingViewController {
 	dates[0] = dateFormatter.string(from: monthstart)
 	dates[1] = dateFormatter.string(from: monthend)
 	
-
+		setupDataSource();
 		fromDtBtn.setTitle("From:" + dates[0], for:.normal)
 		toDtBtn.setTitle("To:" + dates[1], for:.normal)
 			
