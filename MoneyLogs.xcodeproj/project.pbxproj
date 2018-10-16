@@ -221,7 +221,7 @@
 		5FD2B2C01EF5C12F007DB7F9 /* Stats.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5FD2B2C11EF6C9BE00447AFB /* Base */,
+				5FD2B2C11EF5C12F007DB7F9 /* Base */,
 			);
 			name = Stats.storyboard;
 			sourceTree = "<group>";
