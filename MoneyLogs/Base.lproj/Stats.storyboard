@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Stats-->
-        <scene sceneID="U16-6V-FRk">
+        <!--StatsView-->
+        <scene sceneID="U16-6V-DRk">
             <objects>
                 <tableViewController id="J5R-3h-AWC" customClass="StatsViewController" customModule="MoneyLogs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="cec-Ck-4z2">
@@ -112,7 +112,7 @@
             <point key="canvasLocation" x="2045.5999999999999" y="-447.52623688155927"/>
         </scene>
         <!--Stats-->
-        <scene sceneID="GWe-bI-U4w">
+        <scene sceneID="GWe-bI-U2w">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kc9-h1-Yz3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="so5-UL-Bar"/>
@@ -132,7 +132,7 @@
         </scene>
         
         <!--Navigation Controller-->
-        <scene sceneID="kpi-Ih-Zft">
+        <scene sceneID="kpi-Ih-Ztg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zsg-bI-zAp" sceneMemberID="viewController">
                     <toolbarItems/>
@@ -154,7 +154,7 @@
 		I think that the button I defined needs its connection set to a segue per line 221 of this file
 		-->
 		<!--DatePickingViewController-->
-		<scene sceneID="tne-QT-ifu">
+		<scene sceneID="tne-QT-pie">
             <objects>
                 <viewController id="BYZ-38-t1r" customClass="DatePickingViewController" customModule="MoneyLogs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
