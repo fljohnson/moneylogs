@@ -38,7 +38,7 @@ class LoggingViewController: UITableViewController {
   
 var itemlist:[Logitem] = []
 var fired:Bool = false
-var dates:[String] = ["9/1/2018","9/30/2018"]
+var dates:[String] = ["08/01/2018","09/30/2018"]
 var dbDates:[String] = ["2018-08-01","2018-09-02"]
 var dateIndex:Int = 0
 
@@ -266,14 +266,14 @@ override func viewWillAppear(_ animated: Bool)
 	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
 	
 	//now for the UI
-	
+	/*
 	let dateFormatter = DateFormatter()	
 	dateFormatter.dateStyle = DateFormatter.Style.short
 	dateFormatter.timeStyle = DateFormatter.Style.none
 	
 	dates[0] = dateFormatter.string(from: monthstart)
 	dates[1] = dateFormatter.string(from: monthend)
-	
+	*/
 	
 	setupTableView()
  //getData() tableView.reloadData() 
@@ -332,7 +332,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				if(controller != nil)
 				{
 					controller?.dorky = "\(dateIndex) |" + (boton?.currentTitle as! String)
-					controller?.eatmyshorts(dbDates[dateIndex])
+					controller?.eatmyshorts(dates[dateIndex])
 				}
 			}
 		}

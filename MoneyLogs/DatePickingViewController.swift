@@ -47,21 +47,12 @@ class DatePickingViewController: UIViewController {
 			dateLabel.text = curdate + dorky
 			//set datePicker
 			
-			/*
             let dateFormatter = DateFormatter()
             
             dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.none
             
             let possDate = dateFormatter.date(from: curdate)
-            */
-            
-            let dateFormatter = ISO8601DateFormatter()
-            let options: ISO8601DateFormatter.Options = [.withFullDate, .withDashSeparatorInDate]
-            dateFormatter.formatOptions = options
-            
-            let possDate = dateFormatter.date(from: curdate)
-            
             if(possDate != nil)
             {
 				datePicker.setDate(possDate!, animated:false)
