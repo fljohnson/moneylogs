@@ -332,7 +332,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				if(controller != nil)
 				{
 					controller?.dorky = "\(dateIndex) |" + (boton?.currentTitle as! String)
-					controller?.eatmyshorts(dates[dateIndex])
+					controller?.eatmyshorts(dbDates[dateIndex])
 				}
 			}
 		}
