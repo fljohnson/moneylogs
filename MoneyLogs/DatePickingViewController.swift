@@ -13,7 +13,7 @@ class DatePickingViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     var curdate:String = "8/28/2018"
-  }
+  
     
     
     var curISODate:String = ""
@@ -100,7 +100,7 @@ class DatePickingViewController: UIViewController {
     }*/
   }
   
-  public eatmyshorts(_ correctDate:String)
+  func  eatmyshorts(_ correctDate:String)
   {
 	curdate = correctDate
   }
