@@ -39,7 +39,7 @@ class LoggingViewController: UITableViewController {
 var itemlist:[Logitem] = []
 var fired:Bool = false
 var dates:[String] = ["9/1/2018","9/30/2018"]
-var dbDates:[String] = ["2018-09-01","2018-09-30"]
+var dbDates:[String] = ["2018-08-01","2018-09-02"]
 var dateIndex:Int = 0
 
 
@@ -122,11 +122,11 @@ extension LoggingViewController {
     dates[dateIndex]=datestring
     if(dateIndex == 0)
     {
-		fromDtBtn.setTitle("From:" + datestring, for:.normal)
+		fromDtBtn.setTitle("From:" + dbDates[dateIndex], for:.normal)
     }
     if(dateIndex == 1)
     {
-		toDtBtn.setTitle("To:" + datestring, for:.normal)
+		toDtBtn.setTitle("To:" + dbDates[dateIndex], for:.normal)
     }
     setupDataSource()
     tableView.reloadData() //harsh, but effective
@@ -158,8 +158,8 @@ extension LoggingViewController {
 private func setupTableView() {
 		if(!fired)
 		{
-			fromDtBtn.setTitle("From:" + dates[0], for:.normal)
-			toDtBtn.setTitle("To:" + dates[1], for:.normal)
+			fromDtBtn.setTitle("From:" + dbDates[0], for:.normal)
+			toDtBtn.setTitle("To:" + dbDates[1], for:.normal)
 			
 			tableView.rowHeight = UITableViewAutomaticDimension
 			tableView.estimatedRowHeight = 44
@@ -188,7 +188,7 @@ private func setupDataSource() {
 		request.predicate = aha
 		
 		
-
+		SampleData.mensaje = ""
 
         do {
 			var fetched: [Logitem]? = nil
@@ -233,9 +233,12 @@ extension LoggingViewController {
 	
 	func showMessage(msg:String)
 	{
-		let alertController = UIAlertController(title: "Heads up", message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        present(alertController, animated: true, completion: nil)
+		if(!msg.isEmpty)
+		{
+			let alertController = UIAlertController(title: "Heads up", message: msg, preferredStyle: UIAlertControllerStyle.alert)
+			alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+			present(alertController, animated: true, completion: nil)
+        }
 		
 	}
 
