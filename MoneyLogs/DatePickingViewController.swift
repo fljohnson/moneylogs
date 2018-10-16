@@ -12,7 +12,28 @@ import UIKit
 class DatePickingViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    var curdate:String = ""
+    var curdate:String? {
+		didSet {
+		  if let curdate = curdate 
+		  {
+				dateLabel.text = curdate
+				//set datePicker
+				
+				let dateFormatter = DateFormatter()
+				
+				dateFormatter.dateStyle = DateFormatter.Style.short
+				dateFormatter.timeStyle = DateFormatter.Style.none
+				
+				let possDate = dateFormatter.date(from: curdate)
+				if(possDate != nil)
+				{
+					datePicker.setDate(possDate!, animated:false)
+				}
+			}
+		}
+  }
+    
+    
     var curISODate:String = ""
     
     @IBAction func datePickerChanged(_ sender: Any) {
