@@ -20,12 +20,12 @@ static var categories: [String] = [
 	let request = Logitem.fetchRequest()
 	let predicate: NSPredicate = NSPredicate(
 				format:"category == %@",
-				categoryName  as! CVarArg
+				categoryName
 				)
 	let datePredicate: NSPredicate = NSPredicate(
 				format:"(thedate >= %@) AND (thedate <= %@)",
-					fromDate  as! CVarArg,toDate  as! CVarArg)
-	request.predicate = NSCompoundPredicate(type: .AndPredicateType, subpredicates: [predicate, datePredicate])
+					fromDate,toDate)
+	request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, datePredicate])
 	
 	do {
 			var fetched: [Logitem]? = nil
