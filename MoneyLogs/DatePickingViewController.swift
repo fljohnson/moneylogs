@@ -12,9 +12,12 @@ import UIKit
 class DatePickingViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    var curdate:String? {
+    var curdate:String = ""
+    
+    var facingdate:String? {
 		didSet {
-		  if let curdate = curdate 
+		  if let facingdate = facingdate,
+			let curdate = facingdate
 		  {
 				dateLabel.text = curdate
 				//set datePicker
@@ -60,7 +63,7 @@ class DatePickingViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(curdate != nil && !curdate?.isEmpty)
+        if(!curdate.isEmpty)
         {
 			dateLabel.text = curdate
 			//set datePicker
@@ -70,7 +73,7 @@ class DatePickingViewController: UIViewController {
             dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.none
             
-            let possDate = dateFormatter.date(from: curdate?)
+            let possDate = dateFormatter.date(from: curdate)
             if(possDate != nil)
             {
 				datePicker.setDate(possDate!, animated:false)
