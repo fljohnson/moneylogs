@@ -25,6 +25,7 @@
 		5FA177551EF5D592007DB7F9 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA177541EF5D592007DB7F9 /* StatCell.swift */; };
 		5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */; };
 		5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */; };
+		5FD2B2C21EF5C12F007DB7F9 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF5C12F007DB7F9 /* Stats.storyboard */; };
 		5FC0773F1EF5C12F007DB7F9 /* DatePickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		5FA177541EF5D592007DB7F9 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
 		5FD2B2C11EF6C9BE00447AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Logging.storyboard; sourceTree = "<group>"; };
+		5FD2B2C11EF5C12F007DB7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Stats.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				5FA177541EF5D592007DB7F9 /* StatCell.swift */,
 				5FA077421EF5C12F007DB7F9 /* Main.storyboard */,
 				5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */,
+				5FD2B2C01EF5C12F007DB7F9 /* Stats.storyboard */,
 				5FA077451EF5C12F007DB7F9 /* Assets.xcassets */,
 				5FA077471EF5C12F007DB7F9 /* LaunchScreen.storyboard */,
 				5FA0774A1EF5C12F007DB7F9 /* Info.plist */,
@@ -160,6 +163,7 @@
 			files = (
 				5FA077491EF5C12F007DB7F9 /* LaunchScreen.storyboard in Resources */,
 				5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */,
+				5FD2B2C21EF5C12F007DB7F9 /* Stats.storyboard in Resources */,
 				5FA077461EF5C12F007DB7F9 /* Assets.xcassets in Resources */,
 				5FA077441EF5C12F007DB7F9 /* Main.storyboard in Resources */,
 			);
@@ -212,6 +216,14 @@
 				5FD2B2C11EF6C9BE00447AFB /* Base */,
 			);
 			name = Logging.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD2B2C01EF5C12F007DB7F9 /* Stats.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD2B2C11EF6C9BE00447AFB /* Base */,
+			);
+			name = Stats.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
