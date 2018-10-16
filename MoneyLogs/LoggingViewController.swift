@@ -158,8 +158,6 @@ extension LoggingViewController {
 private func setupTableView() {
 		if(!fired)
 		{
-			fromDtBtn.setTitle("From:" + dates[0], for:.normal)
-			toDtBtn.setTitle("To:" + dates[1], for:.normal)
 			
 			tableView.rowHeight = UITableViewAutomaticDimension
 			tableView.estimatedRowHeight = 44
@@ -179,6 +177,8 @@ private func setupDataSource() {
 		//nonlethal, but does not match what it should 
 		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
 		//sanity check with literal - this time with @NSManaged on attribute
+		if(dbDates.count == 2)
+		{
 		let aha: NSPredicate = NSPredicate(
 				format:"(thedate >= %@) AND (thedate <= %@)",
 					dbDates[0],
@@ -186,6 +186,7 @@ private func setupDataSource() {
 							)
 							
 		request.predicate = aha
+		}
 		
 		
 
@@ -241,13 +242,7 @@ extension LoggingViewController {
 
 	override func viewDidAppear(_ animated:Bool)
 	{
-		showMessage(msg:SampleData.mensaje)
 		
-		super.viewDidAppear(animated)
-	}  
-
-override func viewWillAppear(_ animated: Bool) 
-{ 
 	let today=Date()
 	let monthstart = today
 	//mangle it
@@ -255,13 +250,9 @@ override func viewWillAppear(_ animated: Bool)
 	//mangle it
 	
 	//set up the date strings for querying - ISO8601 style
-	/*
 	let options: ISO8601DateFormatter.Options = [.withFullDate, .withDashSeparatorInDate]
 	dbDates[0] = ISO8601DateFormatter.string(from: monthstart, timeZone: TimeZone.current, formatOptions: options)
 	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
-	*/
-	dbDates[0] = "2018-09-01"
-	dbDates[1] = "2018-09-30"
 	
 	//now for the UI
 	
@@ -272,7 +263,17 @@ override func viewWillAppear(_ animated: Bool)
 	dates[0] = dateFormatter.string(from: monthstart)
 	dates[1] = dateFormatter.string(from: monthend)
 	
-	
+
+		fromDtBtn.setTitle("From:" + dates[0], for:.normal)
+		toDtBtn.setTitle("To:" + dates[1], for:.normal)
+			
+		showMessage(msg:SampleData.mensaje)
+		
+		super.viewDidAppear(animated)
+	}  
+
+override func viewWillAppear(_ animated: Bool) 
+{ 
 	setupTableView()
  //getData() tableView.reloadData() 
 } 
