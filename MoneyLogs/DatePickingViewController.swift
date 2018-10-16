@@ -14,7 +14,7 @@ class DatePickingViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     var curdate:String = "8/28/2018"
   
-    
+    var dorky:String = ""
     
     var curISODate:String = ""
     
@@ -25,7 +25,7 @@ class DatePickingViewController: UIViewController {
             dateFormatter.timeStyle = DateFormatter.Style.none
             
             let strDate = dateFormatter.string(from: datePicker.date)
-            dateLabel.text = strDate
+            dateLabel.text = dorky + strDate 
             
 			/*
 			let isoFormatter = ISO8601DateFormatter()
@@ -44,7 +44,7 @@ class DatePickingViewController: UIViewController {
         super.viewDidLoad()
         if(!curdate.isEmpty)
         {
-			dateLabel.text = curdate
+			dateLabel.text = curdate + dorky
 			//set datePicker
 			
             let dateFormatter = DateFormatter()

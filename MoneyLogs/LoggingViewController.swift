@@ -331,6 +331,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				let controller = segue.destination as? DatePickingViewController
 				if(controller != nil)
 				{
+					controller?.dorky = "\(dateIndex) |" + (boton?.currentTitle as! String)
 					controller?.eatmyshorts(dates[dateIndex])
 				}
 			}
