@@ -122,11 +122,11 @@ extension LoggingViewController {
     dates[dateIndex]=datestring
     if(dateIndex == 0)
     {
-		fromDtBtn.setTitle("From:" + dbDates[dateIndex], for:.normal)
+		fromDtBtn.setTitle("From:" + dates[dateIndex], for:.normal)
     }
     if(dateIndex == 1)
     {
-		toDtBtn.setTitle("To:" + dbDates[dateIndex], for:.normal)
+		toDtBtn.setTitle("To:" + dates[dateIndex], for:.normal)
     }
     setupDataSource()
     tableView.reloadData() //harsh, but effective
@@ -158,8 +158,8 @@ extension LoggingViewController {
 private func setupTableView() {
 		if(!fired)
 		{
-			fromDtBtn.setTitle("From:" + dbDates[0], for:.normal)
-			toDtBtn.setTitle("To:" + dbDates[1], for:.normal)
+			fromDtBtn.setTitle("From:" + dates[0], for:.normal)
+			toDtBtn.setTitle("To:" + dates[1], for:.normal)
 			
 			tableView.rowHeight = UITableViewAutomaticDimension
 			tableView.estimatedRowHeight = 44
@@ -177,8 +177,8 @@ private func setupDataSource() {
         let request = Logitem.fetchRequest()
 		let weher: String = "List B" 
 		//nonlethal, but does not match what it should 
-		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
-		//sanity check with literal - this time with @NSManaged on attribute
+		
+		//this "argumentArray:" form seems to work more reliably than the VarArg version
 		let aha: NSPredicate = NSPredicate(
 				format:"(thedate >= %@) AND (thedate <= %@)",
 				argumentArray:[
@@ -190,7 +190,7 @@ private func setupDataSource() {
 		request.predicate = aha
 		
 		
-		SampleData.mensaje = dbDates[1]
+		SampleData.mensaje = ""
 
         do {
 			var fetched: [Logitem]? = nil
@@ -260,11 +260,11 @@ override func viewWillAppear(_ animated: Bool)
 	//mangle it
 	
 	//set up the date strings for querying - ISO8601 style
-	/*
+	
 	let options: ISO8601DateFormatter.Options = [.withFullDate, .withDashSeparatorInDate]
 	dbDates[0] = ISO8601DateFormatter.string(from: monthstart, timeZone: TimeZone.current, formatOptions: options)
 	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
-	*/
+	
 	//now for the UI
 	
 	let dateFormatter = DateFormatter()	
@@ -331,7 +331,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				let controller = segue.destination as? DatePickingViewController
 				if(controller != nil)
 				{
-					controller?.curdate=dates[dateIndex]
+					controller!.curdate=dates[dateIndex]
 				}
 			}
 		}
@@ -343,7 +343,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 			{
 		//		controller?.player = players[thePath!.row] //there is nothing there
 			}
-			controller?.goods = "HIT!";
+			controller!.goods = "HIT!";
 		}
 
 	}
