@@ -11,6 +11,7 @@
         <!--Gestures-->
         <scene sceneID="XhG-U7-rvE">
             <objects>
+				<!--
                 <viewController id="P4Z-cc-qy5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1yO-X0-tsD"/>
@@ -23,6 +24,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="ebd-VN-eha"/>
                 </viewController>
+                -->
+                <viewControllerPlaceholder storyboardName="Stats" id="cdz-y1-yUK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gestures"  id="ebd-VN-eha"/>
+                </viewControllerPlaceholder>
+                
+                <!-- TODO: construct a reasonable facsimile in the above block
+                the tabBarItem is already correct
+                <viewControllerPlaceholder storyboardName="Logging" id="cdK-y1-yUz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Uqj-Qn-stZ"/>
+                </viewControllerPlaceholder>
+                
+                -->
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sl9-KX-fV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1046" y="267"/>

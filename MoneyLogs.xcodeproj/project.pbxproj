@@ -15,10 +15,14 @@
 
 		40A86AFA201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld */; };
 		5FA077511EF5D484007DB7F9 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */; };
+		
+		5FA177511EF5D484007DB7F9 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA177501EF5D484007DB7F9 /* StatsViewController.swift */; };
 		5FA077531EF5D565007DB7F9 /* Logitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077521EF5D565007DB7F9 /* Logitem.swift */; };
+		5FA177531EF5D565007DB7F9 /* Totalitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA177521EF5D565007DB7F9 /* Totalitem.swift */; };
 		
 		5FA077551EF5D592007DB7F9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA077541EF5D592007DB7F9 /* SampleData.swift */; };
 		5FC722D51EF5DCCB00A15F98 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */; };
+		5FA177551EF5D592007DB7F9 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA177541EF5D592007DB7F9 /* StatCell.swift */; };
 		5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */; };
 		5FD2B2C21EF6C9BE00447AFB /* Logging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */; };
 		5FC0773F1EF5C12F007DB7F9 /* DatePickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */; };
@@ -35,10 +39,12 @@
 		5FA0774A1EF5C12F007DB7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyLogs.xcdatamodel; sourceTree = "<group>"; };
 		5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
+		5FA177501EF5D484007DB7F9 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		5FA077521EF5D565007DB7F9 /* Logitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logitem.swift; sourceTree = "<group>"; };
-		
+		5FA177521EF5D565007DB7F9 /* Totalitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Totalitem.swift; sourceTree = "<group>"; };
 		5FA077541EF5D592007DB7F9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		5FA177541EF5D592007DB7F9 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
 		5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
 		5FD2B2C11EF6C9BE00447AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Logging.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,12 +82,15 @@
 				40A86AF7201FD7F500C92DA9 /* MoneyLogs.xcdatamodeld */,
 				5FA0773E1EF5C12F007DB7F9 /* AppDelegate.swift */,
 				5FA077521EF5D565007DB7F9 /* Logitem.swift */,
+				5FA177521EF5D565007DB7F9 /* Totalitem.swift */,
 				5FC0775F1EF5C12F007DB7F9 /* DatePickingViewController.swift */,
 				5FA077541EF5D592007DB7F9 /* SampleData.swift */,
 				5FA077501EF5D484007DB7F9 /* LoggingViewController.swift */,
+				5FA177501EF5D484007DB7F9 /* StatsViewController.swift */,
 				5F59EF431EF6B1FC0070C88E /* ItemDetailsViewController.swift */,
 				5FD2B2BE1EF6C33000447AFB /* GamePickerViewController.swift */,
 				5FC722D41EF5DCCB00A15F98 /* ItemCell.swift */,
+				5FA177541EF5D592007DB7F9 /* StatCell.swift */,
 				5FA077421EF5C12F007DB7F9 /* Main.storyboard */,
 				5FD2B2C01EF6C9BE00447AFB /* Logging.storyboard */,
 				5FA077451EF5C12F007DB7F9 /* Assets.xcassets */,
@@ -167,12 +176,14 @@
 				5FC0773F1EF5C12F007DB7F9 /* DatePickingViewController.swift in Sources */,
 				5FA0773F1EF5C12F007DB7F9 /* AppDelegate.swift in Sources */,
 				5FA077531EF5D565007DB7F9 /* Logitem.swift in Sources */,
-				
+				5FA177531EF5D565007DB7F9 /* Totalitem.swift in Sources */,
 				5FD2B2BF1EF6C33000447AFB /* GamePickerViewController.swift in Sources */,
 				5F59EF441EF6B1FC0070C88E /* ItemDetailsViewController.swift in Sources */,
 				5FA077511EF5D484007DB7F9 /* LoggingViewController.swift in Sources */,
+				5FA177511EF5D484007DB7F9 /* StatsViewController.swift in Sources */,
 				5FA077551EF5D592007DB7F9 /* SampleData.swift in Sources */,
 				5FC722D51EF5DCCB00A15F98 /* ItemCell.swift in Sources */,
+				5FA177551EF5D592007DB7F9 /* StatCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kc9-h1-Ya3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stats-->
+        <scene sceneID="U16-6V-FRk">
+            <objects>
+                <tableViewController id="J5R-3h-AWC" customClass="StatsViewController" customModule="MoneyLogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="cec-Ck-4z2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="infinite" id="AfH-vS-VpN" userLabel="HeaderViewWrapper">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-30Y" customModule="MoneyLogs" customModuleProvider="target">
+                                <rect key="frame" x="0" y="0" width="374" height="40"/>
+                               <!--
+                               <color key="backgroundColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.38831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+                               -->
+                               
+
+                                <state key="normal" title="From:">
+									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
+									<!--
+									<color key="titleShadowColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.98831676140000004" alpha="1" colorSpace="calibratedRGB"/>
+									-->
+								</state>
+                                <connections>
+                                    <segue destination="BYZ-38-t1r" kind="show" id="Vrx-F8-buZ"/>
+                                </connections>
+</button>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-31Y" customModule="MoneyLogs" customModuleProvider="target">
+                                <rect key="frame" x="0" y="80" width="374" height="40"/>
+                                <state key="normal" title="To:">
+									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
+								</state>
+                                <connections>
+                                    <segue destination="BYZ-38-t1r" kind="show" id="Vrx-F8-buG"/>
+                                </connections>
+</button>
+								
+                            </subviews>
+                            
+						</view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StatCell" rowHeight="60" id="Wlg-vU-ttf" customClass="StatCell" customModule="MoneyLogs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlg-vU-ttf" id="1BR-uz-1Qr">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-Un-0Q9">
+                                            <rect key="frame" x="20" y="0.0" width="302" height="59.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="asJ-Qv-bDz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="59.5"/>
+                                                    <subviews>
+														<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Category" textAlignment="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-F1-Iha" userLabel="Category">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="42.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" text="Amount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-F1-Rha" userLabel="Amount">
+                                                            <rect key="frame" x="0" y="0.0" width="45" height="42.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        
+                                                    </subviews>
+                                                </stackView>
+                                                
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Qfh-Un-0Q9" secondAttribute="bottom" id="9hl-ix-fYi"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qfh-Un-0Q9" secondAttribute="trailing" constant="20" id="XcD-Ru-rtf"/>
+                                        <constraint firstItem="Qfh-Un-0Q9" firstAttribute="top" secondItem="1BR-uz-1Qr" secondAttribute="top" id="oFn-9a-RCN"/>
+                                        <constraint firstItem="Qfh-Un-0Q9" firstAttribute="leading" secondItem="1BR-uz-1Qr" secondAttribute="leading" constant="20" id="q56-iE-t1b"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="catLabel" destination="vi5-F1-Iha" id="9in-N2-hdE"/>
+                                    <outlet property="amtLabel" destination="vi5-F1-Rha" id="9in-N2-haE"/>
+									<segue destination="gs1-dg-ImL" kind="show" id="Vrx-F8-biZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J5R-3h-AWC" id="Dcd-Fe-gfA"/>
+                            <outlet property="delegate" destination="J5R-3h-AWC" id="x3j-HX-kCf"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="fromDtBtn" destination="8jb-3N-30Y" id="srh-6x-eeo"/>
+                        <outlet property="toDtBtn" destination="8jb-3N-31Y" id="srh-6x-exo"/>
+					</connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usa-u4-3Iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="-447.52623688155927"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="GWe-bI-U4w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kc9-h1-Yz3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="so5-UL-Bar"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r1Q-bf-Beg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J5R-3h-AWC" kind="relationship" relationship="rootViewController" id="gzF-gZ-C4e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMK-eb-2pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.8" y="-446.17691154422795"/>
+        </scene>
+        
+        <!--Navigation Controller-->
+        <scene sceneID="kpi-Ih-Zft">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zsg-bI-zAp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GD5-32-9ME">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gs1-dg-ImL" kind="relationship" relationship="rootViewController" id="nPj-LB-sLa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjf-Hr-XIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3058" y="-448"/>
+        </scene>
+		<!--TODO: create a Scene as described in the GitHub project mentioned on https://stackoverflow.com/questions/40484182/ios-swift-3-uidatepicker.
+		This is to put up a page for date editing. 
+		I think that the button I defined needs its connection set to a segue per line 221 of this file
+		-->
+		<!--DatePickingViewController-->
+		<scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t1r" customClass="DatePickingViewController" customModule="MoneyLogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y4c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vaC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/DD/YY HH:MM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-L9-lMj">
+                                <rect key="frame" x="114" y="50" width="148" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="48D-iZ-Usx">
+                                <rect key="frame" x="0.0" y="97" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506809720.61473799">
+                                    <!--2017-01-22 20:28:40 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t1r" eventType="valueChanged" id="6v7-Hg-rbv"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HGt-L9-lMj" firstAttribute="centerX" secondItem="8bC-Xf-vaC" secondAttribute="centerX" id="h2s-Fx-w77"/>
+                            <constraint firstItem="HGt-L9-lMj" firstAttribute="top" secondItem="y4c-jy-aDJ" secondAttribute="bottom" constant="30" id="mHZ-EB-Vo6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Item" id="uEO-H9-Izf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SMh-AG-at0">
+                            <connections>
+                                <segue destination="xUV-yw-MHb" kind="unwind" unwindAction="cancelToStatsViewController:" id="5TX-eY-zTa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7Nx-qc-doh">
+                            <connections>
+                                <segue destination="xUV-yw-MHb" kind="unwind" identifier="SaveChosenDate" unwindAction="saveChosenDate:" id="KcX-aN-0Z1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="HGt-L9-lMj" id="fGv-9n-5nI"/>
+                        <outlet property="datePicker" destination="48D-iZ-Usx" id="zpC-iI-td6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-bzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Players" width="30" height="30"/>
+    </resources>
+</document>
