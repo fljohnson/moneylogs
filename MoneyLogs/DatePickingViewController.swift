@@ -16,9 +16,9 @@ class DatePickingViewController: UIViewController {
     
     var facingdate:String? {
 		didSet {
-		  if let facingdate = facingdate,
-			let curdate = facingdate
+		  if let facingdate = facingdate
 		  {
+				curdate = facingdate!
 				dateLabel.text = curdate
 				//set datePicker
 				
