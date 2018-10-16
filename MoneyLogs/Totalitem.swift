@@ -1,4 +1,5 @@
 import Foundation
+import CoreData
 
 final class Totalitem:NSObject {
 
@@ -12,13 +13,19 @@ static var categories: [String] = [
   var category: String
   var amount:Float
   
-  init(_ categoryName:String){
+  init(_ categoryName:String, fromDate:String, toDate:String){
 	category = categoryName
 	amount = 0.0
 	//now for the messy stuff: select all Logitems where category = categoryName
 	let request = Logitem.fetchRequest()
-	let predicate: NSPredicate = NSPredicate(format:"category == %@",categoryName)
-	request.predicate = predicate
+	let predicate: NSPredicate = NSPredicate(
+				format:"category == %@",
+				categoryName  as! CVarArg
+				)
+	let datePredicate: NSPredicate = NSPredicate(
+				format:"(thedate >= %@) AND (thedate <= %@)",
+					fromDate  as! CVarArg,toDate  as! CVarArg)
+	request.predicate = NSCompoundPredicate(type: .AndPredicateType, subpredicates: [predicate, datePredicate])
 	
 	do {
 			var fetched: [Logitem]? = nil

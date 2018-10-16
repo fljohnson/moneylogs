@@ -12,6 +12,7 @@ class DatePickingViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     var curdate:String = ""
+    var curISODate:String = ""
     
     @IBAction func datePickerChanged(_ sender: Any) {
             let dateFormatter = DateFormatter()
@@ -21,6 +22,16 @@ class DatePickingViewController: UIViewController {
             
             let strDate = dateFormatter.string(from: datePicker.date)
             dateLabel.text = strDate
+            
+			/*
+			let isoFormatter = ISO8601DateFormatter()
+			isoFormatter.formatOptions([withFullDate, withDashSeparatorInDate])
+			
+			curISODate = isoFormatter.string(datePicker.date)
+			*/
+			
+			let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+			curISODate = ISO8601DateFormatter.string(from: datePicker.date, timeZone: TimeZone.current, formatOptions: options)
     }
 
     override func viewDidLoad() {
@@ -61,6 +72,19 @@ class DatePickingViewController: UIViewController {
 		let strDate = dateFormatter.string(from: datePicker.date)
 		dateLabel.text = strDate
 		curdate = strDate
+		
+		/*
+		let isoFormatter = ISO8601DateFormatter()
+		isoFormatter.formatOptions([withFullDate, withDashSeparatorInDate])
+		
+		curISODate = isoFormatter.string(datePicker.date)
+		*/
+		
+		
+		let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+		curISODate = ISO8601DateFormatter.string(from: datePicker.date, timeZone: TimeZone.current, formatOptions: options)
+
+		
     }
     /*
     if segue.identifier == "PickGame",

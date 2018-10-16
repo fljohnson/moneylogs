@@ -20,7 +20,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-30Y" customModule="MoneyLogs" customModuleProvider="target">
+<button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-30Y" customModule="MoneyLogs" customModuleProvider="target">
                                 <rect key="frame" x="0" y="0" width="374" height="40"/>
                                <!--
                                <color key="backgroundColor" red="0.38831676140000004" green="0.38831676140000004" blue="0.38831676140000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,8 +37,8 @@
                                     <segue destination="BYZ-38-t1r" kind="show" id="Vrx-F8-buZ"/>
                                 </connections>
 </button>
-<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-31Y" customModule="MoneyLogs" customModuleProvider="target">
-                                <rect key="frame" x="0" y="80" width="374" height="40"/>
+<button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-3N-31Y" customModule="MoneyLogs" customModuleProvider="target">
+                                <rect key="frame" x="0" y="50" width="374" height="40"/>
                                 <state key="normal" title="To:">
 									<color key="titleColor" white="0.25" alpha="1" colorSpace="calibratedWhite"/>
 								</state>

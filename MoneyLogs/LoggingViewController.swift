@@ -38,7 +38,8 @@ class LoggingViewController: UITableViewController {
   
 var itemlist:[Logitem] = []
 var fired:Bool = false
-var dates:[String] = ["09/03/2018","09/30/2018"]
+var dates:[String] = []
+var dbDates:[String] = []
 var dateIndex:Int = 0
 
 
@@ -117,7 +118,7 @@ extension LoggingViewController {
             
 		return
     }
-    
+    dbDates[dateIndex]=datePickerController.curISODate
     dates[dateIndex]=datestring
     if(dateIndex == 0)
     {
@@ -127,7 +128,8 @@ extension LoggingViewController {
     {
 		toDtBtn.setTitle("To:" + datestring, for:.normal)
     }
-    
+    setupDataSource()
+    tableView.reloadData() //harsh, but effective
   }
   
   @IBAction func saveItemDetail(_ segue: UIStoryboardSegue) {
@@ -156,6 +158,9 @@ extension LoggingViewController {
 private func setupTableView() {
 		if(!fired)
 		{
+			fromDtBtn.setTitle("From:" + dates[0], for:.normal)
+			toDtBtn.setTitle("To:" + dates[1], for:.normal)
+			
 			tableView.rowHeight = UITableViewAutomaticDimension
 			tableView.estimatedRowHeight = 44
 			tableView.delegate = self
@@ -165,6 +170,8 @@ private func setupTableView() {
 }
 
 private func setupDataSource() {
+
+		
         //let regionType = filterSegmentedControl.regionType
 		
         let request = Logitem.fetchRequest()
@@ -172,17 +179,13 @@ private func setupDataSource() {
 		//nonlethal, but does not match what it should 
 		//let aha: NSPredicate = NSPredicate(format:"listname == %@",weher as CVarArg) 
 		//sanity check with literal - this time with @NSManaged on attribute
-		let aha: NSPredicate = NSPredicate(format:"listname == 'List B'") 
-	/*	
-        do {
-			request.predicate = aha //allegedly, no error would be thrown here
-		}
-		catch {
-			SampleData.mensaje="Predicate failure: \(error)"
-			return
-		}
-*/
-		//request.predicate = aha
+		let aha: NSPredicate = NSPredicate(
+				format:"(thedate >= %@) AND (thedate <= %@)",
+					dbDates[0],
+					dbDates[1]
+							)
+							
+		request.predicate = aha
 		
 		
 
@@ -245,6 +248,27 @@ extension LoggingViewController {
 
 override func viewWillAppear(_ animated: Bool) 
 { 
+	let today=Date()
+	let monthstart = today
+	//mangle it
+	let monthend = today
+	//mangle it
+	
+	//set up the date strings for querying - ISO8601 style
+	let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+	dbDates[0] = ISO8601DateFormatter.string(from: monthstart, timeZone: TimeZone.current, formatOptions: options)
+	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
+	
+	//now for the UI
+	
+	let dateFormatter = DateFormatter()	
+	dateFormatter.dateStyle = DateFormatter.Style.short
+	dateFormatter.timeStyle = DateFormatter.Style.none
+	
+	dates[0] = dateFormatter.string(from: monthstart)
+	dates[1] = dateFormatter.string(from: monthend)
+	
+	
 	setupTableView()
  //getData() tableView.reloadData() 
 } 

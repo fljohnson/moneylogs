@@ -5,7 +5,8 @@ class StatsViewController: UITableViewController {
 //I smell refactoring on the horizon
 	var itemlist:[Totalitem] = []
 	var fired:Bool = false
-	var dates:[String] = ["09/03/2018","09/30/2018"]
+	var dates:[String] = []
+	var dbDates:[String] = []
 	var dateIndex:Int = 0
 
 
@@ -51,6 +52,7 @@ class StatsViewController: UITableViewController {
 		return
     }
     
+    dbDates[dateIndex]=datePickerController.curISODate
     dates[dateIndex]=datestring
     if(dateIndex == 0)
     {
@@ -96,6 +98,9 @@ class StatsViewController: UITableViewController {
 	private func setupTableView() {
 	if(!fired)
 		{
+			fromDtBtn.setTitle("From:" + dates[0], for:.normal)
+			toDtBtn.setTitle("To:" + dates[1], for:.normal)
+			
 			tableView.rowHeight = UITableViewAutomaticDimension
 			tableView.estimatedRowHeight = 44
 			tableView.delegate = self
@@ -109,13 +114,34 @@ class StatsViewController: UITableViewController {
 		itemlist = []
 		for categoryName in Totalitem.categories
 		{
-			itemlist.append(Totalitem(categoryName))
+			itemlist.append(Totalitem(categoryName,fromDate:dbDates[0],
+					toDate:dbDates[1]))
 		}
 	}
 		
 		
 	override func viewWillAppear(_ animated: Bool) 
 	{ 
+	let today=Date()
+	let monthstart = today
+	//mangle it
+	let monthend = today
+	//mangle it
+	
+	//set up the date strings for querying - ISO8601 style
+	let options: ISO8601DateFormatOptions = [withFullDate, withDashSeparatorInDate]
+	dbDates[0] = ISO8601DateFormatter.string(from: monthstart, timeZone: TimeZone.current, formatOptions: options)
+	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
+	
+	//now for the UI
+	
+	let dateFormatter = DateFormatter()	
+	dateFormatter.dateStyle = DateFormatter.Style.short
+	dateFormatter.timeStyle = DateFormatter.Style.none
+	
+	dates[0] = dateFormatter.string(from: monthstart)
+	dates[1] = dateFormatter.string(from: monthend)
+	
 		setupTableView()
 	} 
 	
