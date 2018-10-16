@@ -181,8 +181,10 @@ private func setupDataSource() {
 		//sanity check with literal - this time with @NSManaged on attribute
 		let aha: NSPredicate = NSPredicate(
 				format:"(thedate >= %@) AND (thedate <= %@)",
+				argumentArray:[
 					dbDates[0],
 					dbDates[1]
+					]
 							)
 							
 		request.predicate = aha
