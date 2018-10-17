@@ -262,7 +262,7 @@ func monthStart(_ today: Date) -> String
 	
 	//set to the first of the current month
 	let topOfMonth = workingCal.date(bySetting:.day, value:1, of:today)
-	return String(dateFormatter.string(from:topOfMonth))
+	return String(dateFormatter.string(from:topOfMonth!))
 }
 
 func monthEnd(_ today: Date) -> String
@@ -278,8 +278,8 @@ func monthEnd(_ today: Date) -> String
 	//add a month, then subtract a day
 	let delta = DateComponents(month:1,day:-1)
 	
-	let endOfMonth = workingCal.date(byAdding:delta,to:interim, wrappingComponents:true)
-	return String(dateFormatter.string(from:endOfMonth))
+	let endOfMonth = workingCal.date(byAdding:delta,to:interim!, wrappingComponents:true)
+	return String(dateFormatter.string(from:endOfMonth!))
 }
 
 
