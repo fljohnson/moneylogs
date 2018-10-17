@@ -119,7 +119,7 @@ extension LoggingViewController {
 		return
     }
     dbDates[dateIndex]=datePickerController.curISODate
-    dates[dateIndex]=datestring
+    dates[dateIndex] = datestring
     if(dateIndex == 0)
     {
 		fromDtBtn.setTitle("From:" + dates[dateIndex], for:.normal)
@@ -251,6 +251,38 @@ extension LoggingViewController {
 		super.viewDidAppear(animated)
 	}  
 
+func monthStart(_ today: Date) -> String
+{
+
+	let dateFormatter = DateFormatter()	
+	dateFormatter.dateStyle = DateFormatter.Style.short
+	dateFormatter.timeStyle = DateFormatter.Style.none
+	
+	let workingCal = Calendar(identifier:.gregorian)
+	
+	//set to the first of the current month
+	let topOfMonth = workingCal.date(bySetting:.day, value:1, of:today)
+	return String(dateFormatter.string(from:topOfMonth))
+}
+
+func monthEnd(_ today: Date) -> String
+{
+	let dateFormatter = DateFormatter()	
+	dateFormatter.dateStyle = DateFormatter.Style.short
+	dateFormatter.timeStyle = DateFormatter.Style.none
+	
+	let workingCal = Calendar(identifier:.gregorian)
+	
+	//get the first of the current month
+	let interim = workingCal.date(bySetting:.day, value:1, of:today)
+	//add a month, then subtract a day
+	let delta = DateComponents(month:1,day:-1)
+	
+	let endOfMonth = workingCal.date(byAdding:delta,to:interim, wrappingComponents:true)
+	return String(dateFormatter.string(from:endOfMonth))
+}
+
+
 override func viewWillAppear(_ animated: Bool) 
 { 
 	let today=Date()
@@ -266,14 +298,10 @@ override func viewWillAppear(_ animated: Bool)
 	dbDates[1] = ISO8601DateFormatter.string(from: monthend, timeZone: TimeZone.current, formatOptions: options)
 	
 	//now for the UI
-	/*
-	let dateFormatter = DateFormatter()	
-	dateFormatter.dateStyle = DateFormatter.Style.short
-	dateFormatter.timeStyle = DateFormatter.Style.none
 	
-	dates[0] = dateFormatter.string(from: monthstart)
-	dates[1] = dateFormatter.string(from: monthend)
-	*/
+	dates[0] = monthStart(today)
+	dates[1] = monthEnd(today)
+	
 	
 	setupTableView()
  //getData() tableView.reloadData() 
@@ -331,7 +359,7 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 				let controller = segue.destination as? DatePickingViewController
 				if(controller != nil)
 				{
-					controller?.dorky = "\(dateIndex) |" + (boton?.currentTitle as! String)
+					controller?.dorky = "|" + dates[dateIndex] + "|"
 					controller?.eatmyshorts(dates[dateIndex])
 				}
 			}
